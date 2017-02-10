@@ -1,29 +1,35 @@
 <!DOCTYPE html>
 <html>
+<title>Endeavor</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="./w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
+.w3-sidenav a {padding:20px}
+</style>
+<body>
 
-  <head> 
-    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-    <title>Endeavor</title> 
-  </head>
-  <div class="header">
-    <div class="dashboard">
-      <ul>
-        <li><a class="dashboardactive" href="./pages/tasks.html">Tasks</a></li>
-        <li><a href="pages/challenges.html">Challenges</a></li>
-        <li><a href="pages/profile.html">Profile</a></li>
-        <li><a href="pages/history.html">History</a></li>
-        <!--
-        <li class="dashboardicon">
-          <a href="javascript:void(0);" style="font-size:15px;" onclick="myFunction()">☰</a>
-        </li>
-      -->
-      </ul>
-    </div>
-    <div class="date">
-      <h2>February 7, 2017</h2>
-      <!--
-      <h2 id="thisdate"></h2>
-      <script>
+<!-- Sidenav (hidden by default) -->
+<nav class="w3-sidenav w3-card-2 w3-top w3-xlarge w3-animate-left" style="display:none;z-index:2;width:40%;min-width:300px" id="mySidenav">
+  <a href="javascript:void(0)" onclick="w3_close()"
+  class="w3-closenav">Close Menu</a>
+  <a href="#tasks" onclick="w3_close()">Tasks</a>
+  <a href="#challenges" onclick="w3_close()">Challenges</a>
+  <a href="#profile" onclick="w3_close()">Profile</a>
+  <a href="#history" onclick="w3_close()">History</a>
+</nav>
+
+<!-- Top menu -->
+<div class="w3-top">
+  <div class="w3-white w3-xlarge w3-padding-xlarge" style="max-width:1200px;margin:auto">
+    <div class="w3-opennav w3-left w3-hover-text-grey" onclick="w3_open()">&#9776</div>
+    <div class="w3-right">
+		  <button type="button" class="w3-btn-floating w3-teal">?</button>
+	  </div>
+    <div class="w3-center" id="thisdate"></div>
+    <script>
         var monthNames = ["January", "February", "March", "April", "May", "June",
           "July", "August", "September", "October", "November", "December"
         ];
@@ -32,31 +38,66 @@
         m = n.getMonth();
         d = n.getDate();
         document.getElementById("thisdate").innerHTML = monthNames[m] + " " + d + ", " + y;
-      </script>
-      -->
+    </script>
+  </div>
+</div>
+  
+<!-- !PAGE CONTENT! -->
+<div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
+
+  <!-- First Grid-->
+  <div class="w3-row-padding w3-padding-16 w3-center" id="food">
+    <div class="w3-half">
+	  <button type="button" class="w3-btn-floating-large">Task 1</button> <br>
+	  <progress id="task1" value="50" max="100"></progress>
     </div>
-    <div class="help">
-      <button type="button">Help</button>
+    <div class="w3-half">
+	  <button type="button" class="w3-btn-floating-large">Task 1</button> <br>
+	  <progress id="task1" value="25" max="100"></progress>
     </div>
   </div>
 
-  <br>
-
-  <div class="task">
-    <progress id="task1" value="50" max="100"></progress>
-    <button type="button">Task 1</button> <br>
-    <progress id="task2" value="50" max="100"></progress>
-    <button type="button">Task 2</button> <br>
-    <progress id="task3" value="33" max="100"></progress>
-    <button type="button">Task 3</button> <br>
-    <progress id="task4" value="0" max="100"></progress>
-    <button type="button">Task 4</button> <br>
+  <br/> <br/> <br/> <br/> <br/> <br/>
+  
+  <!-- Second Grid-->
+  <div class="w3-row-padding w3-padding-16 w3-center">
+    <div class="w3-half">
+	  <button type="button" class="w3-btn-floating-large">Task 1</button> <br>
+	  <progress id="task1" value="33" max="100"></progress>
+    </div>
+    <div class="w3-half">
+	  <button type="button" class="w3-btn-floating-large">Task 1</button> <br>
+	  <progress id="task1" value="75" max="100"></progress>
+    </div>
   </div>
 
-  <br>
-
-  <div class="add">
-    <button type="button">Add Task</button>
+  <!-- Pagination -->
+  <div class="w3-center w3-padding-32">
+    <ul class="w3-pagination">
+      <li><a class="w3-black" href="#">1</a></li>
+      <li><a class="w3-hover-black" href="#">2</a></li>
+      <li><a class="w3-hover-black" href="#">3</a></li>
+      <li><a class="w3-hover-black" href="#">4</a></li>
+      <li><a class="w3-hover-black" href="#">&#8594</a></li>
+    </ul>
+    <div class="w3-right">
+      <button type="button" class="w3-btn-floating w3-teal">+</button>
+    </div>
   </div>
 
+<!-- End page content -->
+</div>
+
+<script>
+// Script to open and close sidenav
+function w3_open() {
+    document.getElementById("mySidenav").style.display = "block";
+}
+ 
+function w3_close() {
+    document.getElementById("mySidenav").style.display = "none";
+}
+</script>
+
+</body>
 </html>
