@@ -1,10 +1,18 @@
 <!DOCTYPE html>
 <html>
-<title>Endeavor</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="./w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+  <head>
+  <title>Endeavor</title>
+    <title>Multus</title> 
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.css" rel="stylesheet">
+    <link href="css/multus.css" rel="stylesheet"/>
+    <link href="css/w3.css" rel="stylesheet"/>
+  </head>
 <style>
 body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
 .w3-sidenav a {padding:20px}
@@ -12,18 +20,18 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
 <body>
 
 <!-- Top menu -->
-<form action="./index.html">
+<form id="addTaskForm" role="form" method="get" action="/add">
   <div class="w3-top">
     <div class="w3-white w3-xlarge w3-padding-xlarge" style="max-width:1200px;margin:auto">
       <div class="w3-opennav w3-left w3-hover-text-grey" onclick="w3_open()">
-        <h3><a href="./index.html" style="text-decoration:none;">X</a></h3>
+        <h3><a href="/" style="text-decoration:none;">X</a></h3>
       </div>
       <div class="w3-right">
-  		  <button type="button" onclick="location.href='./index.html'" class="w3-btn-floating-large w3-teal">Save</button>
+  		  <button type="submit" onclick="location.href='/'" class="w3-btn-floating-large w3-teal">Save</button>
   	  </div>
       <div class="w3-center">
         &nbsp &nbsp &nbsp
-        <input type="text" name="taskname" value="Task" style="text-align:center;">
+        <input type="text" name="name" value="Task" style="text-align:center;">
       </div>
     </div>
   </div>
