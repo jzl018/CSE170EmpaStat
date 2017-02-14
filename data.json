@@ -1,34 +1,41 @@
 {
 	"friends": [
 		{
-			"name": "Doug Engelbart",
+			"name": "Math",
+			"subtask1": "Review notes",
+			"subtask2": "Do homework",
+			"subtask3": "Study for exam",
+			"difficulty": "4",
+			"duration": "6 hours",
+			"startdate": "02/13/2017",
+			"starttime": "03:00 PM",
+			"startreminder": "30 minutes",
+			"enddate": "02/15/2017",
+			"endtime": "12:00 PM",
+			"endreminder": "2 hours",
+			"progress": "20",
 			"description": "Has awesome pet mice",
 			"imageURL": "http://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Douglas_Engelbart_in_2008.jpg/972px-Douglas_Engelbart_in_2008.jpg"			
 		},
 		{
-			"name": "Ivan Sutherland",
+			"name": "History",
+			"description": "Has awesome pet mice",
+			"imageURL": "http://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Douglas_Engelbart_in_2008.jpg/972px-Douglas_Engelbart_in_2008.jpg"			
+		},
+		{
+			"name": "English",
 			"description": "Great at sketching",
 			"imageURL": "http://upload.wikimedia.org/wikipedia/commons/5/5c/Ivan_Sutherland_at_CHM.jpg"			
 		},
 		{
-			"name": "Lucy Suchman",
+			"name": "Economics",
 			"description": "Loves Trukese navigators",
 			"imageURL": "http://upload.wikimedia.org/wikipedia/commons/d/df/Lucy_Suchman.jpeg"			
 		},
 		{
-			"name": "Vannevar Bush",
+			"name": "Spanish",
 			"description": "Has stellar associative memory",
 			"imageURL": "http://upload.wikimedia.org/wikipedia/commons/e/ea/Vannevar_Bush_portrait.jpg"			
-		},
-		{
-			"name": "Grace Hopper",
-			"description": "Only friend with a Navy ship named after them",
-			"imageURL": "http://amhistory.si.edu/ogmt/images/upload/women-mathematicians/AHB2012q06025.jpg"
-		},
-		{
-			"name": "Allen Newell",
-			"description": "Really into psychology",
-			"imageURL": "http://uploads.edubilla.com/awards-winners/92/b4/allen-newell.jpg"
 		}
 	]
 }
