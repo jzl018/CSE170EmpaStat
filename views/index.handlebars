@@ -48,35 +48,19 @@
 		<br/>
 
 		<div class="container">
-			<h1>Multus</h1>
-			<!--
-			<div class="friend">
-				<img src="http://lorempixel.com/500/500/people" alt="Fake Friend">
-				<a href="#" class="anagram">Fake friend</a>
-				<p>All my friends are imaginary.</p>
-			</div>
-			-->
-			<!--	
-			{{#each friends}}
-				<div class="friend">
-				<img src={{imageURL}} alt="Fake Friend" class="img-responsive"> 
-					<a href="#" class="anagram">{{name}}</a>
-					<p>{{description}}</p>
-				</div>
-			{{/each}}
-			-->
-			
-			<div class="d-inline-block bg-warning">
-				{{#each friends}}
+			<h1>Multus</h1>			
+			<div class="d-inline-block bg-warning text-center">
+				{{#each tasks}}
 					<div class="friend">
 						<a href="#" class="btn btn-primary btn-lg btn-block">{{name}}</a>
 						<progress value={{progress}} max="100"></progress>
 					</div>
 				{{/each}}
 			</div>
-
+			<br/>
+			
 			<form id="addFriendForm" role="form" method="get" action="/add">
-				<h3>Add a friend</h3>
+				<h3>Add a task</h3>
 			    <div class="form-group">
 			      <label for="name">Name:</label>
 			      <input type="text" class="form-control" id="name" placeholder="Name" name="name">
@@ -87,6 +71,13 @@
 			    </div>
 			    <input type="submit" id="submitBtn" class="btn btn-default" value="Add the friend"></input>
 			</form>
+			
+
+			<!--
+			<div class="w3-center">
+				<button type="button" onclick="location.href='./create_task.html'" class="w3-btn-floating w3-teal">+</button>
+			</div>
+			-->
 		</div>
 
 		<script>
