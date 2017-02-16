@@ -10,7 +10,7 @@ var handlebars = require('express3-handlebars')
 
 var index = require('./routes/index');
 var login = require('./routes/login');
-var newtask = require('./routes/newtask');
+var newtask = require('./routes/newTask');
 var task = require('./routes/task');
 var add = require('./routes/add');
 var challenges = require('./routes/challenges');
