@@ -1,6 +1,6 @@
 var data = require("../data.json");
 
-exports.addTask = function(req, res) {   
+exports.removeTask = function(req, res) {   
 	// Your code goes here
 		var name = req.query.name;
 		var sub1 = req.query.subtask1;
@@ -17,10 +17,24 @@ exports.addTask = function(req, res) {
 		var prog = req.query.progress;
     //var desc = req.query.description;
     //var img = 'http://lorempixel.com/400/400/people';
-    data.tasks.push({name: name, subtask1: sub1, subtask2: sub2, subtask3: sub3, 
+
+    // Find the current task
+    //var tasknames = JSON.parse(data.tasks)
+    /*
+    var index = -1;
+		var val = name;
+		var filteredObj = data.find(function(item, i){
+	  	if(item.name === val){
+	    	index = i;
+	    	return i;
+	  	}
+		});
+		*/
+
+    data.tasks[index] = {name: name, subtask1: sub1, subtask2: sub2, subtask3: sub3, 
     									difficulty: diff, duration: dur, startdate: startd, 
     									starttime: startt, startreminder: startr, enddate: endd, 
-    									endtime: endt, endreminder: endr, progress: prog});
+    									endtime: endt, endreminder: endr, progress: prog};
 
     //console.log(data);
   

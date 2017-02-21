@@ -13,6 +13,8 @@ var login = require('./routes/login');
 var newtask = require('./routes/newTask');
 var task = require('./routes/task');
 var add = require('./routes/add');
+var modify = require('./routes/modify');
+var remove = require('./routes/remove');
 var challenges = require('./routes/challenges');
 var profile = require('./routes/profile');
 var history = require('./routes/history');
@@ -47,6 +49,8 @@ app.get('/login', login.viewLogin);
 app.get('/newtask', newtask.viewNewTask)
 app.get('/task/:name', task.viewTask);
 app.get('/add', add.addTask);
+app.get('/modify', modify.modifyTask);
+app.get('/remove', remove.removeTask);
 app.get('/challenges', challenges.viewChallenges);
 app.get('/profile', profile.viewProfile);
 app.get('/history', history.viewHistory);
