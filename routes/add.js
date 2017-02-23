@@ -15,6 +15,8 @@ exports.addTask = function(req, res) {
 		var endt = req.query.endtime;
 		var endr = req.query.endreminder;
 		var prog = req.query.progress;
+
+		console.log(sub2);
     //var desc = req.query.description;
     //var img = 'http://lorempixel.com/400/400/people';
     data.tasks.push({name: name, subtask1: sub1, subtask2: sub2, subtask3: sub3, 
@@ -22,7 +24,7 @@ exports.addTask = function(req, res) {
     									starttime: startt, startreminder: startr, enddate: endd, 
     									endtime: endt, endreminder: endr, progress: prog});
 
-    //console.log(data);
+    console.log(data);
   
     res.render('index', data);
 }

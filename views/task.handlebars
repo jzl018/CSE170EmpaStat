@@ -29,25 +29,27 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
   		  <button type="submit" name="modify" onclick="location.href='/'" class="w3-btn-floating-large w3-teal">Save</button>
   	  </div>
       <div class="w3-center">
-        &nbsp &nbsp &nbsp
-        <input type="text" name="name" value={{name}} style="text-align:center;">
+       &nbsp &nbsp &nbsp
+         <input type="text" name="name" style="text-align:center;" value="{{name}}" >
+        <!-- <h2>{{name}}</h2> -->
       </div>
     </div>
-  </div>
-    
+  </div> 
   <!-- !PAGE CONTENT! -->
   <div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
     <div class="w3-center">
       <h3>Subtask</h3>
-      <input type="text" name="subtask1" value={{subtask1}} class="subtask" style="text-align:center;"> <br/> <br/>
-      <input type="text" name="subtask2" value={{subtask2}} class="subtask" style="text-align:center;"> <br /> <br/>
-      <input type="text" name="subtask3" value={{subtask3}} class="subtask" style="text-align:center;"> <br /> <br/>
+      <input type="text" name="subtask1" value="{{subtask1}}" class="subtask" style="text-align:center;"> <br/> <br/>
+      <input type="text" name="subtask2" value="{{subtask2}}" class="subtask" style="text-align:center;"> <br /> <br/>
+      <input type="text" name="subtask3" value="{{subtask3}}" class="subtask" style="text-align:center;"> <br /> <br/>
+
       <h4>Difficulty</h4>
       <input type="radio" class="w3-radio" value="1">1
       <input type="radio" class="w3-radio" value="2">2
       <input type="radio" class="w3-radio" value="3">3
       <input type="radio" class="w3-radio" value="3">4
       <input type="radio" class="w3-radio" value="3">5 <br/> <br/>
+
       <h4>Duration</h4>
       <select>
         <option value="1hr">1 hour</option>
