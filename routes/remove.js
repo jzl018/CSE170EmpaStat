@@ -19,22 +19,17 @@ exports.removeTask = function(req, res) {
     //var img = 'http://lorempixel.com/400/400/people';
 
     // Find the current task
-    //var tasknames = JSON.parse(data.tasks)
-    /*
-    var index = -1;
-		var val = name;
-		var filteredObj = data.find(function(item, i){
-	  	if(item.name === val){
-	    	index = i;
-	    	return i;
-	  	}
-		});
-		*/
+    var index = 0;
+    for (i = 0; i < data.tasks.length; i++) { 
+    	if (data.tasks[i].name === name) {
+    		//console.log(data.tasks[i].name + "===" + name);
+    		index = i;
+    		break;
+    	}
+    	//console.log(data.tasks[i].name + "!=" + name);
+    }
 
-    data.tasks[index] = {name: name, subtask1: sub1, subtask2: sub2, subtask3: sub3, 
-    									difficulty: diff, duration: dur, startdate: startd, 
-    									starttime: startt, startreminder: startr, enddate: endd, 
-    									endtime: endt, endreminder: endr, progress: prog};
+    data.tasks.splice(index, 1);
 
     //console.log(data);
   
