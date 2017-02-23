@@ -27,7 +27,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
         <h3><a href="/" style="text-decoration:none;">X</a></h3>
       </div>
       <div class="w3-right">
-  		  <button type="submit" name="modify" formaction="/modify" onclick="location.href='/'" class="w3-btn-floating-large w3-teal">Save</button>
+  		  <button type="submit" name="modify" formaction="/modify" onclick="setProgress()" class="w3-btn-floating-large w3-teal">Save</button>
   	  </div>
       <div class="w3-center">
        &nbsp &nbsp &nbsp
@@ -40,14 +40,14 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
   <div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
     <div class="w3-center">
       <h3>Subtasks</h3>
-      <input type="text" name="subtask1" value="{{subtask1}}" class="subtask" style="text-align:center;"> 
-      <input type="checkbox" name="subtask1status" value="checked" {{subtask1status}}>
+      <input type="text" name="subtask1" id="subtask1" value="{{subtask1}}" class="subtask" style="text-align:center;"> 
+      <input type="checkbox" name="subtask1status" id="subtask1status" value="checked" {{subtask1status}}>
       <br/> <br/>
-      <input type="text" name="subtask2" value="{{subtask2}}" class="subtask" style="text-align:center;"> 
-      <input type="checkbox" name="subtask2status" value="checked" {{subtask2status}}> 
+      <input type="text" name="subtask2" id="subtask2" value="{{subtask2}}" class="subtask" style="text-align:center;"> 
+      <input type="checkbox" name="subtask2status" id="subtask2status" value="checked" {{subtask2status}}> 
       <br/> <br/>
-      <input type="text" name="subtask3" value="{{subtask3}}" class="subtask" style="text-align:center;"> 
-      <input type="checkbox" name="subtask3status" value="checked" {{subtask3status}}> 
+      <input type="text" name="subtask3" id="subtask3" value="{{subtask3}}" class="subtask" style="text-align:center;"> 
+      <input type="checkbox" name="subtask3status" id="subtask3status" value="checked" {{subtask3status}}> 
       <br/> <br/>
       <h4>Difficulty</h4>
       <input type="range" name="difficulty" min="1" max="5" value="{{difficulty}}">
@@ -60,6 +60,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
       Complete By:
       <input type="datetime-local" name="enddate" value="{{enddate}}"> <br/> <br/>
       Remind <input type="number" name="endreminder" min="0" step="10" max="180" value="{{endreminder}}"> minutes before due <br/> <br/>
+      <input type="number" name="progress" id="progress" min="0" max="100" value="0" hidden>
       <input type="submit" name="delete" formaction="/remove" value="Delete" class="w3-btn">
     </div>
   </div>
@@ -69,14 +70,37 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
   </div>
 
   <script>
-  // Script to open and close sidenav
-  function w3_open() {
-      document.getElementById("mySidenav").style.display = "block";
-  }
-   
-  function w3_close() {
-      document.getElementById("mySidenav").style.display = "none";
-  }
+    // Script to open and close sidenav
+    function w3_open() {
+        document.getElementById("mySidenav").style.display = "block";
+    }
+     
+    function w3_close() {
+        document.getElementById("mySidenav").style.display = "none";
+    }
+  </script>
+
+  <script type="text/javascript">
+    function setProgress() {
+      var prog = 0;
+      if (document.getElementById("subtask1").value.replace(/ /g,'') != ''
+         && document.getElementById("subtask1status").checked == true) {
+        prog += 33;
+      }
+      if (document.getElementById("subtask2").value.replace(/ /g,'') != ''
+         && document.getElementById("subtask2status").checked == true) {
+        prog += 33;
+      }
+      if (document.getElementById("subtask3").value.replace(/ /g,'') != ''
+         && document.getElementById("subtask3status").checked == true) {
+        prog += 33;
+      }
+      if (prog === 99) {
+        prog = 100;
+      }
+      document.getElementById("progress").value = prog;
+      window.location.href = '/';
+    }
   </script>
 
   </body>
