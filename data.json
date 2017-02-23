@@ -8,9 +8,9 @@
 			"difficulty": "4",
 			"duration": "6",
 			"startdate": "2017-02-18T09:00",
-			"startreminder": "30 minutes",
+			"startreminder": "30",
 			"enddate": "2017-02-23T23:59",
-			"endreminder": "2 hours",
+			"endreminder": "120",
 			"progress": "20"
 		},
 		{
@@ -21,9 +21,9 @@
 			"difficulty": "2",
 			"duration": "2",
 			"startdate": "2017-02-18T09:00",
-			"startreminder": "30 minutes",
+			"startreminder": "30",
 			"enddate": "2017-02-23T23:59",
-			"endreminder": "2 hours",
+			"endreminder": "120",
 			"progress": "40"
 		},
 		{
@@ -34,9 +34,9 @@
 			"difficulty": "4",
 			"duration": "6",
 			"startdate": "2017-02-18T09:00",
-			"startreminder": "30 minutes",
+			"startreminder": "30",
 			"enddate": "2017-02-23T23:59",
-			"endreminder": "2 hours",
+			"endreminder": "120",
 			"progress": "10"		
 		},
 		{
@@ -47,9 +47,9 @@
 			"difficulty": "4",
 			"duration": "6",
 			"startdate": "2017-02-18T09:00",
-			"startreminder": "30 minutes",
+			"startreminder": "30",
 			"enddate": "2017-02-23T23:59",
-			"endreminder": "2 hours",
+			"endreminder": "120",
 			"progress": "90"		
 		},
 		{
@@ -60,9 +60,9 @@
 			"difficulty": "4",
 			"duration": "6",
 			"startdate": "2017-02-18T09:00",
-			"startreminder": "30 minutes",
+			"startreminder": "30",
 			"enddate": "2017-02-23T23:59",
-			"endreminder": "2 hours",
+			"endreminder": "120",
 			"progress": "60"		
 		}
 	]

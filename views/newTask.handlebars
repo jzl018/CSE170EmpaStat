@@ -43,7 +43,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
       <input type="text" name="subtask2"class="subtask" style="text-align:center;"> <br /> <br/>
       <input type="text" name="subtask3" class="subtask" style="text-align:center;"> <br /> <br/>
       <h4>Difficulty</h4>
-      <input type="range" name="difficulty" min="1" max="5">
+      <input type="range" name="difficulty" min="1" max="5"> <br/>
       <!--
       <input type="radio" name="difficulty" class="w3-radio" value="1">1
       <input type="radio" name="difficulty" class="w3-radio" value="2">2
@@ -52,7 +52,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
       <input type="radio" name="difficulty" class="w3-radio" value="3">5 <br/> <br/>
       -->
       <h4>Duration</h4>
-      <input type="number" name="duration" min="1" max="10"> hour(s)
+      <input type="number" name="duration" min="1" max="10"> hour(s) <br/>
       <!--
       <select>
         <option value="1hr">1 hour</option>
@@ -65,13 +65,11 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
     -->
       <h4>Reminders</h4>
       &nbsp &nbsp &nbsp &nbsp Start By:
-      <input type="datetime-local" name="startdate"> <br/>
-      Remind 30min before<input class="w3-check" type="checkbox" name="vehicle" value="Bike"> <br/>
-      Remind 2hour before<input class="w3-check" type="checkbox" name="vehicle" value="Bike"> <br/> <br/>
+      <input type="datetime-local" name="startdate"> <br/> <br/>
+      Remind <input type="number" name="startreminder" min="0" step="10" max="180"> minutes before start <br/> <br/>
       Complete By:
-      <input type="datetime-local" name="enddate"> <br/>
-      Remind 30min before<input class="w3-check" type="checkbox" name="vehicle" value="Bike"> <br/>
-      Remind 2hour before<input class="w3-check" type="checkbox" name="vehicle" value="Bike"> <br/> <br/>
+      <input type="datetime-local" name="enddate"> <br/> <br/>
+      Remind <input type="number" name="endreminder" min="0" step="10" max="180"> minutes before due <br/> <br/>
       <input type="reset" value="Delete" class="w3-btn">
     </div>
   </div>

@@ -31,7 +31,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
   	  </div>
       <div class="w3-center">
        &nbsp &nbsp &nbsp
-         <input type="text" name="name" style="text-align:center;" value="{{name}}" >
+         <input type="text" name="name" style="text-align:center;" value="{{name}}">
         <!-- <h2>{{name}}</h2> -->
       </div>
     </div>
@@ -67,13 +67,11 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
     -->
       <h4>Reminders</h4>
       &nbsp &nbsp &nbsp &nbsp Start By:
-      <input type="datetime-local" name="startdate" value="{{startdate}}"> <br/>
-      Remind 30min before<input class="w3-check" type="checkbox" name="vehicle" value="Bike"> <br/>
-      Remind 2hour before<input class="w3-check" type="checkbox" name="vehicle" value="Bike"> <br/> <br/>
+      <input type="datetime-local" name="startdate" value="{{startdate}}"> <br/> <br/>
+      Remind <input type="number" name="startreminder" min="0" step="10" max="180" value="{{startreminder}}"> minutes before start <br/> <br/>
       Complete By:
-      <input type="datetime-local" name="enddate" value="{{enddate}}"> <br/>
-      Remind 30min before<input class="w3-check" type="checkbox" name="vehicle" value="Bike"> <br/>
-      Remind 2hour before<input class="w3-check" type="checkbox" name="vehicle" value="Bike"> <br/> <br/>
+      <input type="datetime-local" name="enddate" value="{{enddate}}"> <br/> <br/>
+      Remind <input type="number" name="endreminder" min="0" step="10" max="180" value="{{endreminder}}"> minutes before due <br/> <br/>
       <input type="submit" name="delete" formaction="/remove" value="Delete" class="w3-btn">
     </div>
   </div>
