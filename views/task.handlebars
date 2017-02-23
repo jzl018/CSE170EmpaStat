@@ -40,9 +40,15 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
   <div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
     <div class="w3-center">
       <h3>Subtasks</h3>
-      <input type="text" name="subtask1" value="{{subtask1}}" class="subtask" style="text-align:center;"> <br/> <br/>
-      <input type="text" name="subtask2" value="{{subtask2}}" class="subtask" style="text-align:center;"> <br /> <br/>
-      <input type="text" name="subtask3" value="{{subtask3}}" class="subtask" style="text-align:center;"> <br /> <br/>
+      <input type="text" name="subtask1" value="{{subtask1}}" class="subtask" style="text-align:center;"> 
+      <input type="checkbox" name="subtask1status" value="checked" {{subtask1status}}>
+      <br/> <br/>
+      <input type="text" name="subtask2" value="{{subtask2}}" class="subtask" style="text-align:center;"> 
+      <input type="checkbox" name="subtask2status" value="checked" {{subtask2status}}> 
+      <br/> <br/>
+      <input type="text" name="subtask3" value="{{subtask3}}" class="subtask" style="text-align:center;"> 
+      <input type="checkbox" name="subtask3status" value="checked" {{subtask3status}}> 
+      <br/> <br/>
       <h4>Difficulty</h4>
       <input type="range" name="difficulty" min="1" max="5" value="{{difficulty}}">
       <h4>Duration</h4>
