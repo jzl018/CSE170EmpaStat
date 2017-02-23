@@ -26,11 +26,11 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
         <h3><a href="/" style="text-decoration:none;">X</a></h3>
       </div>
       <div class="w3-right">
-  		  <button type="submit" onclick="location.href='/'" class="w3-btn-floating-large w3-teal">Save</button>
+  		  <button type="submit" onsubmit="location.href='/'" class="w3-btn-floating-large w3-teal">Save</button>
   	  </div>
       <div class="w3-center">
         &nbsp &nbsp &nbsp
-        <input type="text" name="name" value="Task" style="text-align:center;">
+        <input type="text" name="name" placeholder="Task Name" style="text-align:center;" required>
       </div>
     </div>
   </div>
@@ -39,30 +39,13 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
   <div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
     <div class="w3-center">
       <h3>Subtask</h3>
-      <input type="text" name="subtask1" class="subtask" style="text-align:center;"> <br/> <br/>
-      <input type="text" name="subtask2"class="subtask" style="text-align:center;"> <br /> <br/>
-      <input type="text" name="subtask3" class="subtask" style="text-align:center;"> <br /> <br/>
+      <input type="text" name="subtask1" placeholder="Subtask 1" class="subtask" style="text-align:center;"> <br/> <br/>
+      <input type="text" name="subtask2" placeholder="Subtask 2" class="subtask" style="text-align:center;"> <br /> <br/>
+      <input type="text" name="subtask3" placeholder="Subtask 3" class="subtask" style="text-align:center;"> <br /> <br/>
       <h4>Difficulty</h4>
       <input type="range" name="difficulty" min="1" max="5"> <br/>
-      <!--
-      <input type="radio" name="difficulty" class="w3-radio" value="1">1
-      <input type="radio" name="difficulty" class="w3-radio" value="2">2
-      <input type="radio" name="difficulty" class="w3-radio" value="3">3
-      <input type="radio" name="difficulty" class="w3-radio" value="3">4
-      <input type="radio" name="difficulty" class="w3-radio" value="3">5 <br/> <br/>
-      -->
       <h4>Duration</h4>
       <input type="number" name="duration" min="1" max="10"> hour(s) <br/>
-      <!--
-      <select>
-        <option value="1hr">1 hour</option>
-        <option value="1hr">2 hours</option>
-        <option value="1hr">3 hours</option>
-        <option value="1hr">4 hours</option>
-        <option value="1hr">5 hours</option>
-        <option value="1hr">6 hours</option>
-      </select> <br/> <br/>
-    -->
       <h4>Reminders</h4>
       &nbsp &nbsp &nbsp &nbsp Start By:
       <input type="datetime-local" name="startdate"> <br/> <br/>
@@ -70,7 +53,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
       Complete By:
       <input type="datetime-local" name="enddate"> <br/> <br/>
       Remind <input type="number" name="endreminder" min="0" step="10" max="180"> minutes before due <br/> <br/>
-      <input type="reset" value="Delete" class="w3-btn">
+      <input type="reset" value="Clear" class="w3-btn">
     </div>
   </div>
 
