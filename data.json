@@ -85,5 +85,27 @@
 			"progress": "66",
 			"complete": ""		
 		}
+	],
+"challenges": [
+		{
+			"name": "Completed 1 Task",
+			"required": 1,
+			"complete": "yes"
+		},
+		{
+			"name": "Completed 3 Tasks",
+			"required": 3,
+			"complete": ""
+		},
+		{
+			"name": "Completed 10 Tasks",
+			"required": 10,
+			"complete": ""	
+		},
+		{
+			"name": "Completed 25 Tasks",
+			"required": 25,
+			"complete": ""
+		}
 	]
 }

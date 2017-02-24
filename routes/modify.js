@@ -31,15 +31,33 @@ exports.modifyTask = function(req, res) {
     	//console.log(data.tasks[i].name + "!=" + name);
     }
 
-    //console.log(sub1);
-
     data.tasks[index] = {name: name, subtask1: sub1, subtask2: sub2, subtask3: sub3, 
                         subtask1status: sub1s, subtask2status: sub2s, subtask3status: sub3s, 
     					difficulty: diff, duration: dur, startdate: startd, 
     					startreminder: startr, enddate: endd, 
     					endreminder: endr, progress: prog, complete: comp};
 
-    //console.log(data);
+    // Count completed tasks for challenges
+    var completed = 0;
+    for (i = 0; i < data.tasks.length; i++) { 
+        if (data.tasks[i].complete === "yes") {
+            completed++;
+        }
+    }
+
+    // Update challenges data
+    for (i = 0; i < data.challenges.length; i++) { 
+        if (completed >= data.challenges[i].required) {
+            data.challenges[i] = {name: data.challenges[i].name, 
+                                 required: data.challenges[i].required,
+                                 complete: "yes"};
+        }
+        else {
+            data.challenges[i] = {name: data.challenges[i].name, 
+                                 required: data.challenges[i].required,
+                                 complete: ""};
+        }
+    }
   
     res.render('index', data);
 }

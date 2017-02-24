@@ -29,6 +29,29 @@ exports.removeTask = function(req, res) {
 
     data.tasks.splice(index, 1);
 
+    // Count completed tasks for challenges
+    var completed = 0;
+    for (i = 0; i < data.tasks.length; i++) { 
+        if (data.tasks[i].complete === "yes") {
+            completed++;
+        }
+    }
+
+    // Update challenges data
+    for (i = 0; i < data.challenges.length; i++) { 
+        if (completed >= data.challenges[i].required) {
+            data.challenges[i] = {name: data.challenges[i].name, 
+                                 required: data.challenges[i].required,
+                                 complete: "yes"};
+        }
+        else {
+            data.challenges[i] = {name: data.challenges[i].name, 
+                                 required: data.challenges[i].required,
+                                 complete: ""};
+        }
+    }
+  
+
     //console.log(data);
   
     res.render('index', data);
