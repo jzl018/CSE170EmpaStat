@@ -52,10 +52,12 @@
 			<h1>Multus</h1>			
 			<div class="d-inline-block bg-warning text-center">
 				{{#each tasks}}
-					<div class="friend">
-						<a href="task/{{name}}" class="btn btn-primary btn-lg btn-block">{{name}}</a>
-						<progress value={{progress}} max="100"></progress>
-					</div>
+					{{#unless complete}}
+						<div class="friend">
+							<a href="task/{{name}}" class="btn btn-primary btn-lg btn-block">{{name}}</a>
+							<progress value={{progress}} max="100"></progress>
+						</div>
+					{{/unless}}
 				{{/each}}
 			</div>
 			<br/>

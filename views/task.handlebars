@@ -24,10 +24,10 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
   <div class="w3-top">
     <div class="w3-white w3-xlarge w3-padding-xlarge" style="max-width:1200px;margin:auto">
       <div class="w3-opennav w3-left w3-hover-text-grey" onclick="w3_open()">
-        <h3><a href="/" style="text-decoration:none;">X</a></h3>
+        <h3><a href="javascript:history.go(-1)" style="text-decoration:none;">X</a></h3>
       </div>
       <div class="w3-right">
-  		  <button type="submit" name="modify" formaction="/modify" onclick="setProgress()" class="w3-btn-floating-large w3-teal">Save</button>
+  		  <button type="submit" name="modify" formaction="/modify" onclick="return setProgress()" class="w3-btn-floating-large w3-teal">Save</button>
   	  </div>
       <div class="w3-center">
        &nbsp &nbsp &nbsp
@@ -61,6 +61,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
       <input type="datetime-local" name="enddate" value="{{enddate}}"> <br/> <br/>
       Remind <input type="number" name="endreminder" min="0" step="10" max="180" value="{{endreminder}}"> minutes before due <br/> <br/>
       <input type="number" name="progress" id="progress" min="0" max="100" value="0" hidden>
+      <input type="text" name="complete" id="complete" value="" hidden>
       <input type="submit" name="delete" formaction="/remove" value="Delete" class="w3-btn">
     </div>
   </div>
@@ -82,6 +83,8 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
 
   <script type="text/javascript">
     function setProgress() {
+
+      // Set progress from subtasks
       var prog = 0;
       if (document.getElementById("subtask1").value.replace(/ /g,'') != ''
          && document.getElementById("subtask1status").checked == true) {
@@ -99,6 +102,18 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
         prog = 100;
       }
       document.getElementById("progress").value = prog;
+
+      // 
+      if (prog === 100) {
+        if (confirm("You have marked all subtasks as completed. This task will accordingly be move to your 'History' tab.") == false) {
+          return false;
+        }
+        else {
+          document.getElementById("complete").value = "yes";
+        }
+      }
+
+      // Return to home menu
       window.location.href = '/';
     }
   </script>

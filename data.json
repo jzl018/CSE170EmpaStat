@@ -14,7 +14,8 @@
 			"startreminder": "30",
 			"enddate": "2017-02-23T23:59",
 			"endreminder": "120",
-			"progress": "20"
+			"progress": "33",
+			"complete": ""
 		},
 		{
 			"name": "History",
@@ -30,7 +31,8 @@
 			"startreminder": "30",
 			"enddate": "2017-02-23T23:59",
 			"endreminder": "120",
-			"progress": "40"
+			"progress": "33",
+			"complete": ""
 		},
 		{
 			"name": "English",
@@ -46,7 +48,8 @@
 			"startreminder": "30",
 			"enddate": "2017-02-23T23:59",
 			"endreminder": "120",
-			"progress": "10"		
+			"progress": "0",
+			"complete": ""		
 		},
 		{
 			"name": "Economics",
@@ -62,7 +65,8 @@
 			"startreminder": "30",
 			"enddate": "2017-02-23T23:59",
 			"endreminder": "120",
-			"progress": "90"		
+			"progress": "100",
+			"complete": "yes"	
 		},
 		{
 			"name": "Spanish",
@@ -78,7 +82,8 @@
 			"startreminder": "30",
 			"enddate": "2017-02-23T23:59",
 			"endreminder": "120",
-			"progress": "60"		
+			"progress": "66",
+			"complete": ""		
 		}
 	]
 }

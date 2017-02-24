@@ -12,12 +12,11 @@ exports.addTask = function(req, res) {
 		var diff = req.query.difficulty;
 		var dur = req.query.duration;
 		var startd = req.query.startdate;
-		var startt = req.query.starttime;
 		var startr = req.query.startreminder;
 		var endd = req.query.enddate;
-		var endt = req.query.endtime;
 		var endr = req.query.endreminder;
 		var prog = req.query.progress;
+		var comp = req.query.complete;
 
 		console.log(sub2);
     //var desc = req.query.description;
@@ -25,8 +24,8 @@ exports.addTask = function(req, res) {
     data.tasks.push({name: name, subtask1: sub1, subtask2: sub2, subtask3: sub3,
     									subtask1status: sub1s, subtask2status: sub2s, subtask3status: sub3s,  
     									difficulty: diff, duration: dur, startdate: startd, 
-    									starttime: startt, startreminder: startr, enddate: endd, 
-    									endtime: endt, endreminder: endr, progress: prog});
+    									startreminder: startr, enddate: endd, 
+    									endreminder: endr, progress: prog, complete: comp});
 
     console.log(data);
   
