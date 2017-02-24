@@ -51,7 +51,10 @@ exports.removeTask = function(req, res) {
         }
     }
   
-
+    // Update user data
+    data.users[0] = {name: data.users[0].name, streak: data.users[0].streak, 
+                    hours: data.users[0].hours, completedtasks: completed};
+                    
     //console.log(data);
   
     res.render('index', data);

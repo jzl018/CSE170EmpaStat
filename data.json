@@ -1,4 +1,12 @@
 {
+	"users": [
+		{
+			"name": "Ryan",
+			"streak": 0,
+			"hours": 0,
+			"completedtasks": 0
+		}
+	],
 	"tasks": [
 		{
 			"name": "Math",
