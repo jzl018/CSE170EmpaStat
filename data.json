@@ -4,7 +4,7 @@
 			"name": "Ryan",
 			"streak": 0,
 			"hours": 0,
-			"completedtasks": 0
+			"completedtasks": 1
 		}
 	],
 	"tasks": [
@@ -96,22 +96,22 @@
 	],
 "challenges": [
 		{
-			"name": "Completed 1 Task",
+			"name": "Complete 1 Task",
 			"required": 1,
 			"complete": "yes"
 		},
 		{
-			"name": "Completed 3 Tasks",
+			"name": "Complete 3 Tasks",
 			"required": 3,
 			"complete": ""
 		},
 		{
-			"name": "Completed 10 Tasks",
+			"name": "Complete 10 Tasks",
 			"required": 10,
 			"complete": ""	
 		},
 		{
-			"name": "Completed 25 Tasks",
+			"name": "Complete 25 Tasks",
 			"required": 25,
 			"complete": ""
 		}
