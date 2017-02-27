@@ -54,8 +54,8 @@ app.get('/addcategory', addcategory.addNewCategory);
 app.get('/category/:cname/newtask', newtask.viewNewTask)
 app.get('/category/:cname/task/:tname', task.viewTask);
 app.get('/category/:cname/add', add.addTask);
-app.get('/modify', modify.modifyTask);
-app.get('/remove', remove.removeTask);
+app.get('/category/:cname/modify', modify.modifyTask);
+app.get('/category/:cname/remove', remove.removeTask);
 app.get('/profile', profile.viewProfile);
 app.get('/history', history.viewHistory);
 // Example route

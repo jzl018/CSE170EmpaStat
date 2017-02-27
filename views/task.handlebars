@@ -26,11 +26,12 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
         <h3><a href="javascript:history.go(-1)" style="text-decoration:none;">X</a></h3>
       </div>
       <div class="w3-right">
-  		  <button type="submit" name="modify" formaction="/modify" onclick="return setProgress()" class="w3-btn-floating-large w3-teal">Save</button>
+  		  <button type="submit" name="modify" formaction="/category/{{category}}/modify" onclick="return setProgress()" class="w3-btn-floating-large w3-teal">Save</button>
+        <input type="text" name="cname" id="cname" value="{{category}}" hidden>
   	  </div>
       <div class="w3-center">
        &nbsp &nbsp &nbsp
-         <input type="text" name="tname" style="text-align:center;" value="{{tname}}" readonly>
+         <input type="text" name="tname" id="tname" style="text-align:center;" value="{{tname}}" readonly>
         <!-- <h2>{{name}}</h2> -->
       </div>
     </div>
@@ -74,6 +75,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
   <script type="text/javascript">
     function setProgress() {
 
+      /*
       // Set progress from subtasks
       var prog = 0;
       if (document.getElementById("subtask1").value.replace(/ /g,'') != ''
@@ -102,9 +104,10 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
           document.getElementById("complete").value = "yes";
         }
       }
+      */
 
       // Return to home menu
-      window.location.href = '/';
+      window.location.href = '/category/{{cname}}';
     }
   </script>
 

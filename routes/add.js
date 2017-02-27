@@ -26,7 +26,7 @@ exports.addTask = function(req, res) {
 
     //var desc = req.query.description;
     //var img = 'http://lorempixel.com/400/400/people';
-    data.categories[cindex].tasks.push({tname: tname, 
+    data.categories[cindex].tasks.push({tname: tname, category: cname, 
 								    									difficulty: diff, duration: dur, startdate: startd, 
 								    									startreminder: startr, enddate: endd, 
 								    									endreminder: endr, progress: prog, complete: comp});
