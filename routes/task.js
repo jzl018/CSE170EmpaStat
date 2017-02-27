@@ -17,12 +17,9 @@ exports.viewTask = function(req, res) {
     //console.log(data.categories[i].name + "!=" + name);
    }
 
-console.log(cname);
-console.log(tname);
-
   var index = 0;
     for (i = 0; i < data.categories[cindex].tasks.length; i++) {
-    console.log(data.categories[cindex].tasks[i].tname + "==" + tname); 
+    //console.log(data.categories[cindex].tasks[i].tname + "==" + tname); 
     	if (data.categories[cindex].tasks[i].tname === tname) {
     		// console.log(data.categories[cindex].tasks[i].tname + "==" + tname);
     		index = i;

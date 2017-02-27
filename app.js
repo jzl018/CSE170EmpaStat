@@ -49,11 +49,11 @@ if ('development' == app.get('env')) {
 app.get('/', index.view);
 app.get('/login', login.viewLogin);
 app.get('/help', help.viewHelp);
-app.get('/category/:name', category.viewCategory);
+app.get('/category/:cname', category.viewCategory);
 app.get('/addcategory', addcategory.addNewCategory);
-app.get('/category/:name/newtask', newtask.viewNewTask)
-app.get('/category/:name/task/:name', task.viewTask);
-app.get('/add', add.addTask);
+app.get('/category/:cname/newtask', newtask.viewNewTask)
+app.get('/category/:cname/task/:tname', task.viewTask);
+app.get('/category/:cname/add', add.addTask);
 app.get('/modify', modify.modifyTask);
 app.get('/remove', remove.removeTask);
 app.get('/profile', profile.viewProfile);
