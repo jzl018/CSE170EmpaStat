@@ -2,7 +2,7 @@ var data = require("../data.json");
 
 exports.addNewCategory = function(req, res) {   
 	// Your code goes here
-		var name = req.query.name;
+		var cname = req.query.cname;
 		var prog = req.query.progress;
 		var comp = req.query.complete;
 		var taskarr = [];
@@ -16,7 +16,7 @@ exports.addNewCategory = function(req, res) {
     									startreminder: startr, enddate: endd, 
     									endreminder: endr, progress: prog, complete: comp}); */
 
-		data.categories.push({name: name, progress: prog, complete: comp, tasks: taskarr});
+		data.categories.push({cname: cname, progress: prog, complete: comp, tasks: taskarr});
 
     console.log(data.categories);
   

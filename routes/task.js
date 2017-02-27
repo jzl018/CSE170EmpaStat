@@ -5,9 +5,12 @@ exports.viewTask = function(req, res) {
   // controller code goes here
   var name = req.params.name;
 
+  console.log(data.categories.length);
+  console.log(data.categories.tasks.length);
+
   var index = 0;
-    for (i = 0; i < data.tasks.length; i++) { 
-    	if (data.tasks[i].name === name) {
+    for (i = 0; i < data.categories.tasks.length; i++) { 
+    	if (data.categories.tasks[i].name === name) {
     		//console.log(data.tasks[i].name + "===" + name);
     		index = i;
     		break;
@@ -15,7 +18,7 @@ exports.viewTask = function(req, res) {
     	//console.log(data.tasks[i].name + "!=" + name);
     }
 
-  var thistask = data.tasks[index];
+  var thistask = data.categories.tasks[index];
   console.log(thistask);
   res.render('task', thistask);
   /*

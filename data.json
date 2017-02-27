@@ -9,12 +9,12 @@
 	],
 	"categories": [
 		{
-			"name": "Math",
+			"cname": "Math",
 			"progress": "75",
 			"complete": "",
 			"tasks": [
 				{
-					"name": "Study for Exam",
+					"tname": "Study for Exam",
 					"category": "Math",
 					"difficulty": "4",
 					"duration": "6",
@@ -25,7 +25,7 @@
 					"complete": "yes"
 				},
 				{
-					"name": "Finish Homework",
+					"tname": "Finish Homework",
 					"category": "Math",
 					"difficulty": "4",
 					"duration": "3",
@@ -36,7 +36,7 @@
 					"complete": "yes"
 				},
 				{
-					"name": "Talk to Professor",
+					"tname": "Talk to Professor",
 					"category": "Math",
 					"difficulty": "2",
 					"duration": "1",
@@ -47,7 +47,7 @@
 					"complete": ""
 				},
 				{
-					"name": "Read next Chapter",
+					"tname": "Read next Chapter",
 					"category": "Math",
 					"difficulty": "1",
 					"duration": "2",
@@ -60,12 +60,12 @@
 			]
 		},
 		{
-			"name": "Science",
+			"cname": "Science",
 			"progress": "0",
 			"complete": "",
 			"tasks": [
 				{
-					"name": "Finish Lab",
+					"tname": "Finish Lab",
 					"category": "Science",
 					"difficulty": "4",
 					"duration": "3",

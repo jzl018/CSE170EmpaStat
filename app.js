@@ -51,8 +51,8 @@ app.get('/login', login.viewLogin);
 app.get('/help', help.viewHelp);
 app.get('/category/:name', category.viewCategory);
 app.get('/addcategory', addcategory.addNewCategory);
-app.get('/newtask', newtask.viewNewTask)
-app.get('/task/:name', task.viewTask);
+app.get('/category/:name/newtask', newtask.viewNewTask)
+app.get('/category/:name/task/:name', task.viewTask);
 app.get('/add', add.addTask);
 app.get('/modify', modify.modifyTask);
 app.get('/remove', remove.removeTask);

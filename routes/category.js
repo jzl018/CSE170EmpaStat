@@ -3,11 +3,11 @@ var data = require('../data.json');
 
 exports.viewCategory = function(req, res) {
   // controller code goes here
-  var name = req.params.name;
+  var cname = req.params.cname;
 
   var index = 0;
     for (i = 0; i < data.categories.length; i++) { 
-    	if (data.categories[i].name === name) {
+    	if (data.categories[i].cname === cname) {
     		//console.log(data.categories[i].name + "===" + name);
     		index = i;
     		break;

@@ -52,7 +52,7 @@
 				{{#each categories}}
 					{{#unless complete}}
 						<div class="friend">
-							<a href="category/{{name}}" class="btn btn-primary btn-lg btn-block">{{name}}</a>
+							<a href="category/{{cname}}" class="btn btn-primary btn-lg btn-block">{{cname}}</a>
 							<progress value={{progress}} max="100"></progress>
 						</div>
 					{{/unless}}
@@ -63,7 +63,7 @@
 			<div class="w3-center">
 				<form id="addCategoryForm" role="form" method="get" action="/addCategory">
           <div class="randomcontainer input-group">
-            <input type="text" class="form-control" name="name" placeholder="Enter Category Name">
+            <input type="text" class="form-control" name="cname" placeholder="Enter Category Name">
 			      <input type="number" name="progress" min="0" max="100" value="0" hidden>
 			      <input type="text" name="complete" value="" hidden>
             <span class="input-group-btn">
