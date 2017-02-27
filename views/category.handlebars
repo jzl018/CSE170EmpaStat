@@ -31,7 +31,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
   	  </div>
       <div class="w3-center">
        &nbsp &nbsp &nbsp
-         <input type="text" name="name" id="cname" style="text-align:center;" value="{{cname}}" readonly>
+         <input type="text" name="cname" id="cname" style="text-align:center;" value="{{cname}}" readonly>
         <!-- <h2>{{name}}</h2> -->
       </div>
     </div>
@@ -41,7 +41,8 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
       <div class="d-inline-block bg-warning text-center">
         {{#each tasks}}
             <div class="friend">
-              <a href="/category/{{../cname}}/task/{{name}}" id="tasklink" class="btn btn-primary btn-lg btn-block">{{name}}</a>
+              <a href="/category/{{../cname}}/task/{{tname}}" id="tasklink" class="btn btn-primary btn-lg btn-block">{{tname}}</a>
+              <input type="text" name="tname" id="tname" value="{{tname}}" hidden>
               <progress value="0" max="100"></progress>
             </div>
         {{/each}}

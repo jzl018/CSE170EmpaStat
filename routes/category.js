@@ -5,15 +5,16 @@ exports.viewCategory = function(req, res) {
   // controller code goes here
   var cname = req.params.cname;
 
+  // Find this category
   var index = 0;
-    for (i = 0; i < data.categories.length; i++) { 
-    	if (data.categories[i].cname === cname) {
-    		//console.log(data.categories[i].name + "===" + name);
-    		index = i;
-    		break;
-    	}
-    	//console.log(data.categories[i].name + "!=" + name);
-    }
+  for (i = 0; i < data.categories.length; i++) { 
+   	if (data.categories[i].cname === cname) {
+   		//console.log(data.categories[i].name + "===" + name);
+   		index = i;
+   		break;
+   	}
+   	//console.log(data.categories[i].name + "!=" + name);
+   }
 
   var thiscategory = data.categories[index];
   console.log(thiscategory);

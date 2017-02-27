@@ -3,53 +3,35 @@ var data = require('../data.json');
 
 exports.viewTask = function(req, res) {
   // controller code goes here
-  var name = req.params.name;
+  var cname = req.params.cname;
+  var tname = req.params.tname;
 
-  console.log(data.categories.length);
-  console.log(data.categories.tasks.length);
+  // Find this category
+  var cindex = 0;
+  for (i = 0; i < data.categories.length; i++) { 
+    if (data.categories[i].cname === cname) {
+      //console.log(data.categories[i].name + "===" + name);
+      cindex = i;
+      break;
+    }
+    //console.log(data.categories[i].name + "!=" + name);
+   }
+
+console.log(cname);
+console.log(tname);
 
   var index = 0;
-    for (i = 0; i < data.categories.tasks.length; i++) { 
-    	if (data.categories.tasks[i].name === name) {
-    		//console.log(data.tasks[i].name + "===" + name);
+    for (i = 0; i < data.categories[cindex].tasks.length; i++) {
+    console.log(data.categories[cindex].tasks[i].tname + "==" + tname); 
+    	if (data.categories[cindex].tasks[i].tname === tname) {
+    		// console.log(data.categories[cindex].tasks[i].tname + "==" + tname);
     		index = i;
     		break;
     	}
     	//console.log(data.tasks[i].name + "!=" + name);
     }
 
-  var thistask = data.categories.tasks[index];
+  var thistask = data.categories[cindex].tasks[index];
   console.log(thistask);
   res.render('task', thistask);
-  /*
-  var subtask1 = req.params.subtask1;
-  var subtask2 = req.params.subtask2;
-  var subtask3 = req.params.subtask3;
-  var difficulty = req.params.difficulty;
-  var duration = req.params.duration;
-  var startdate = req.params.startdate;
-  var starttime = req.params.starttime;
-  var startreminder = req.params.startreminder;
-  var enddate = req.params.enddate;
-  var endtime = req.params.endtime;
-  var endreminder = req.params.endreminder;
-  var progress = req.params.progress;
-
-  console.log("The subtask name is: " + subtask1);
-  res.render('task', { 
-    'taskName': name, 
-    'tsubtask1': subtask1,
-		'tsubtask2': subtask2,
-		'tsubtask3': subtask3,
-		'tdifficulty': difficulty,
-		'tduration': duration,
-		'tstartdate': startdate,
-		'tstarttime': starttime,
-		'tstartreminder': startreminder,
-		'tenddate': enddate,
-		'tendtime': endtime,
-		'tendreminder': endreminder,
-		'tprogress': progress
-  });
-*/
 };
