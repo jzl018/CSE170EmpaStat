@@ -49,10 +49,10 @@
 
 		<div class="container">	
 			<div class="d-inline-block bg-warning text-center">
-				{{#each tasks}}
+				{{#each categories}}
 					{{#unless complete}}
 						<div class="friend">
-							<a href="task/{{name}}" class="btn btn-primary btn-lg btn-block">{{name}}</a>
+							<a href="category/{{name}}" class="btn btn-primary btn-lg btn-block">{{name}}</a>
 							<progress value={{progress}} max="100"></progress>
 						</div>
 					{{/unless}}
@@ -61,7 +61,18 @@
 			<br/>
 			
 			<div class="w3-center">
-				<button type="button" onclick="location.href='newTask'" class="w3-btn-floating w3-teal">+</button>
+				<form id="addCategoryForm" role="form" method="get" action="/addCategory">
+          <div class="randomcontainer input-group">
+            <input type="text" class="form-control" name="name" placeholder="Enter Category Name">
+			      <input type="number" name="progress" min="0" max="100" value="0" hidden>
+			      <input type="text" name="complete" value="" hidden>
+            <span class="input-group-btn">
+              <button type="submit" class="btn btn-primary">
+                <span class="glyphicon glyphicon-plus"></span> Add Category 
+              </button>
+            </span>  
+          </div>
+        </form>
 			</div>
 			
 		</div>

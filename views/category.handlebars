@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Multus</title> 
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+
+    <link href="../css/bootstrap.css" rel="stylesheet">
+    <link href="../css/bootstrap-theme.css" rel="stylesheet">
+    <link href="../css/multus.css" rel="stylesheet"/>
+    <link href="../css/w3.css" rel="stylesheet"/>
+  </head>
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
+.w3-sidenav a {padding:20px}
+</style>
+<body>
+
+<!-- Top menu -->
+<!-- <form id="addTaskForm" role="form" method="get" action="/modify"> -->
+<form id="addTaskForm" role="form" method="get">
+  <div class="w3-top">
+    <div class="w3-white w3-xlarge w3-padding-xlarge" style="max-width:1200px;margin:auto">
+      <div class="w3-opennav w3-left w3-hover-text-grey" onclick="w3_open()">
+        <h3><a href="javascript:history.go(-1)" style="text-decoration:none;">X</a></h3>
+      </div>
+      <div class="w3-right">
+  		  <button type="submit" name="modify" formaction="/modify" onclick="return setProgress()" class="w3-btn-floating-large w3-teal">Save</button>
+  	  </div>
+      <div class="w3-center">
+       &nbsp &nbsp &nbsp
+         <input type="text" name="name" style="text-align:center;" value="{{name}}" readonly>
+        <!-- <h2>{{name}}</h2> -->
+      </div>
+    </div>
+  </div> <br/> <br/> <br/> <br/>
+  <!-- !PAGE CONTENT! -->
+  <div class="container"> 
+      <div class="d-inline-block bg-warning text-center">
+        {{#each tasks}}
+            <div class="friend">
+              <a href="task/{{name}}" class="btn btn-primary btn-lg btn-block">{{name}}</a>
+              <progress value="0" max="100"></progress>
+            </div>
+        {{/each}}
+      </div>
+      <br/>
+      
+      <div class="w3-center">
+        <button type="button" onclick="location.href='newTask'" class="w3-btn-floating w3-teal">+</button>
+      </div>
+      
+    </div>
+
+
+  <!-- End page content -->
+  </div>
+
+  <script>
+    // Script to open and close sidenav
+    function w3_open() {
+        document.getElementById("mySidenav").style.display = "block";
+    }
+     
+    function w3_close() {
+        document.getElementById("mySidenav").style.display = "none";
+    }
+  </script>
+
+  <script type="text/javascript">
+    function setProgress() {
+
+      /*
+      // Set progress from subtasks
+      var prog = 0;
+      if (document.getElementById("subtask1").value.replace(/ /g,'') != ''
+         && document.getElementById("subtask1status").checked == true) {
+        prog += 33;
+      }
+      if (document.getElementById("subtask2").value.replace(/ /g,'') != ''
+         && document.getElementById("subtask2status").checked == true) {
+        prog += 33;
+      }
+      if (document.getElementById("subtask3").value.replace(/ /g,'') != ''
+         && document.getElementById("subtask3status").checked == true) {
+        prog += 33;
+      }
+      if (prog === 99) {
+        prog = 100;
+      }
+      document.getElementById("progress").value = prog;
+
+      // Popup confirmation
+      if (prog === 100) {
+        if (confirm("You have marked all subtasks as completed. This task will accordingly be move to your 'History' tab.") == false) {
+          return false;
+        }
+        else {
+          document.getElementById("complete").value = "yes";
+        }
+      }
+      */
+
+      // Return to home menu
+      window.location.href = '/';
+    }
+  </script>
+
+  </body>
+</html>

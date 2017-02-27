@@ -7,91 +7,75 @@
 			"completedtasks": 1
 		}
 	],
-	"tasks": [
+	"categories": [
 		{
 			"name": "Math",
-			"subtask1": "Review notes",
-			"subtask2": "Do homework",
-			"subtask3": "Study for exam",
-			"subtask1status": "checked",
-			"subtask2status": "",
-			"subtask3status": "",
-			"difficulty": "4",
-			"duration": "6",
-			"startdate": "2017-02-18T09:00",
-			"startreminder": "30",
-			"enddate": "2017-02-23T23:59",
-			"endreminder": "120",
-			"progress": "33",
-			"complete": ""
+			"progress": "75",
+			"complete": "",
+			"tasks": [
+				{
+					"name": "Study for Exam",
+					"category": "Math",
+					"difficulty": "4",
+					"duration": "6",
+					"startdate": "2017-02-18T09:00",
+					"startreminder": "30",
+					"enddate": "2017-02-23T23:59",
+					"endreminder": "120",
+					"complete": "yes"
+				},
+				{
+					"name": "Finish Homework",
+					"category": "Math",
+					"difficulty": "4",
+					"duration": "3",
+					"startdate": "2017-02-18T09:00",
+					"startreminder": "30",
+					"enddate": "2017-02-23T23:59",
+					"endreminder": "120",
+					"complete": "yes"
+				},
+				{
+					"name": "Talk to Professor",
+					"category": "Math",
+					"difficulty": "2",
+					"duration": "1",
+					"startdate": "2017-02-18T09:00",
+					"startreminder": "30",
+					"enddate": "2017-02-23T23:59",
+					"endreminder": "120",
+					"complete": ""
+				},
+				{
+					"name": "Read next Chapter",
+					"category": "Math",
+					"difficulty": "1",
+					"duration": "2",
+					"startdate": "2017-02-18T09:00",
+					"startreminder": "30",
+					"enddate": "2017-02-23T23:59",
+					"endreminder": "120",
+					"complete": "yes"
+				}
+			]
 		},
 		{
-			"name": "History",
-			"subtask1": "Read Chapter 2",
-			"subtask2": "Prepare for class",
-			"subtask3": "Talk to professor",
-			"subtask1status": "checked",
-			"subtask2status": "",
-			"subtask3status": "",
-			"difficulty": "2",
-			"duration": "2",
-			"startdate": "2017-02-18T09:00",
-			"startreminder": "30",
-			"enddate": "2017-02-23T23:59",
-			"endreminder": "120",
-			"progress": "33",
-			"complete": ""
-		},
-		{
-			"name": "English",
-			"subtask1": "Review notes",
-			"subtask2": "Do homework",
-			"subtask3": "Study for exam",
-			"subtask1status": "",
-			"subtask2status": "",
-			"subtask3status": "",
-			"difficulty": "4",
-			"duration": "6",
-			"startdate": "2017-02-18T09:00",
-			"startreminder": "30",
-			"enddate": "2017-02-23T23:59",
-			"endreminder": "120",
+			"name": "Science",
 			"progress": "0",
-			"complete": ""		
-		},
-		{
-			"name": "Economics",
-			"subtask1": "Review notes",
-			"subtask2": "Do homework",
-			"subtask3": "Study for exam",
-			"subtask1status": "checked",
-			"subtask2status": "checked",
-			"subtask3status": "checked",
-			"difficulty": "4",
-			"duration": "6",
-			"startdate": "2017-02-18T09:00",
-			"startreminder": "30",
-			"enddate": "2017-02-23T23:59",
-			"endreminder": "120",
-			"progress": "100",
-			"complete": "yes"	
-		},
-		{
-			"name": "Spanish",
-			"subtask1": "Review notes",
-			"subtask2": "Do homework",
-			"subtask3": "Study for exam",
-			"subtask1status": "checked",
-			"subtask2status": "checked",
-			"subtask3status": "",
-			"difficulty": "4",
-			"duration": "6",
-			"startdate": "2017-02-18T09:00",
-			"startreminder": "30",
-			"enddate": "2017-02-23T23:59",
-			"endreminder": "120",
-			"progress": "66",
-			"complete": ""		
+			"complete": "",
+			"tasks": [
+				{
+					"name": "Finish Lab",
+					"category": "Science",
+					"difficulty": "4",
+					"duration": "3",
+					"startdate": "2017-02-18T09:00",
+					"startreminder": "30",
+					"enddate": "2017-02-23T23:59",
+					"endreminder": "120",
+					"complete": ""
+				}
+			]
 		}
 	],
 "challenges": [
