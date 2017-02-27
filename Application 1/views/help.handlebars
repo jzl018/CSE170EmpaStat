@@ -1,0 +1,75 @@
+<!doctype html>
+
+<html>
+	<head>
+		<title>Multus</title>	
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+
+		<link href="css/bootstrap.css" rel="stylesheet">
+		<link href="css/bootstrap-theme.css" rel="stylesheet">
+		<link href="css/multus.css" rel="stylesheet"/>
+		<link href="css/w3.css" rel="stylesheet"/>
+	</head>
+
+	<body>
+		<!-- Sidenav (hidden by default) -->
+		<nav class="w3-sidenav w3-card-2 w3-top w3-xlarge w3-animate-left" style="display:none;z-index:2;width:40%;min-width:300px" id="mySidenav">
+		  <a href="javascript:void(0)" onclick="w3_close()"
+		  class="w3-closenav">Close Menu</a>
+		  <a href="/" onclick="w3_close()">Tasks</a>
+		  <a href="profile" onclick="w3_close()">Profile</a>
+		  <a href="history" onclick="w3_close()">History</a>
+		  <a href="login" onclick="w3_close()">Logout</a>
+
+		</nav>
+		<!-- Top menu -->
+		<div class="w3-top">
+		  <div class="w3-white w3-xlarge w3-padding-xlarge" style="max-width:1200px;margin:auto">
+		    <div class="w3-opennav w3-left w3-hover-text-grey" onclick="w3_open()">&#9776</div>
+		    <div class="w3-right">
+				  <button type="button" onclick="location.href='help'" class="w3-btn-floating w3-teal">?</button>
+			  </div>
+		    <div class="w3-center">About</div>
+		  </div>
+		</div>
+
+		<div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
+    		<div class="w3-center">
+      			<h2>About Multus</h2>
+      			<p>
+      				Multus is an app designed to help students beat procrastination and increase productivity in a fun and enjoyable way.
+      			</p>
+      			<h2>Task Page</h2>
+      			<p>
+      				On this page you can view your current tasks, create new tasks, or view more information on your current tasks. Create a new task by pressing the + button, and to edit, delete, or view the description of a task, press the task name.
+      			</p>
+      			<h2>Profile</h2>
+      			<p>
+      				On this page you can view your profile, as well as your statistics such as your streak days, tasks completed, and hours logged. Here, you can also view challenges you have completed, as well as upcoming challenges to complete.
+      			</p>
+      			<h2>History</h2>
+      			<p>
+      				On this page you can view your past tasks that you have completed. You are able to edit or delete these tasks as well. <!-- You can also search by key words, or order them using different methods. -->
+      			</p>
+    		</div>
+  		</div>
+
+		<script>
+			// Script to open and close sidenav
+			function w3_open() {
+			    document.getElementById("mySidenav").style.display = "block";
+			}
+			 
+			function w3_close() {
+			    document.getElementById("mySidenav").style.display = "none";
+			}
+		</script>
+
+		<script src="js/jquery-1.11.0.js"></script>
+		<script src="js/multus.js"></script>
+		<script src="js/bootstrap.js"></script>
+	</body>
+</html>

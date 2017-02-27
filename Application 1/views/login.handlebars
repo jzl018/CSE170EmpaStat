@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Multus</title> 
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap-theme.css" rel="stylesheet">
+    <link href="css/multus.css" rel="stylesheet"/>
+    <link href="css/w3.css" rel="stylesheet"/>
+  </head>
+
+  <div class="w3-top">
+      <div class="w3-white w3-xlarge w3-padding-xlarge" style="max-width:1200px;margin:auto">
+        <div class="w3-opennav w3-left w3-hover-text-grey" onclick="w3_open()">&#9776</div>
+        <div class="w3-right">
+          <button type="button" onclick="loginHelp()" class="w3-btn-floating w3-teal">?</button>
+        </div>
+        <div class="w3-center" id="thisdate">&nbsp; Login</div>
+      </div>
+  </div>
+
+  <br/> <br/> <br/> <br/> 
+
+  <div class="container">
+    <form class="form-signin">
+      <label for="inputEmail" class="sr-only">Email address</label>
+      <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus="">
+      <br/>
+      <label for="inputPassword" class="sr-only">Password</label>
+      <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
+      <div class="checkbox">
+          <label>
+            <input type="checkbox" value="remember-me"> Remember me
+          </label>
+      </div>
+      <button class="btn btn-lg btn-primary btn-block" type="submit" type="submit" formaction="/">Sign in</button>
+    </form>
+  </div>
+
+  <script type="text/javascript">
+    function loginHelp() {
+      alert("Please enter your email and password to sign in.");
+    }
+  </script>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Multus</title> 
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Karma">
+
+    <link href="../css/bootstrap.css" rel="stylesheet">
+    <link href="../css/bootstrap-theme.css" rel="stylesheet">
+    <link href="../css/multus.css" rel="stylesheet"/>
+    <link href="../css/w3.css" rel="stylesheet"/>
+  </head>
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
+.w3-sidenav a {padding:20px}
+</style>
+<body>
+
+<!-- Top menu -->
+<!-- <form id="addTaskForm" role="form" method="get" action="/modify"> -->
+<form id="addTaskForm" role="form" method="get">
+  <div class="w3-top">
+    <div class="w3-white w3-xlarge w3-padding-xlarge" style="max-width:1200px;margin:auto">
+      <div class="w3-opennav w3-left w3-hover-text-grey" onclick="w3_open()">
+        <h3><a href="javascript:history.go(-1)" style="text-decoration:none;">X</a></h3>
+      </div>
+      <div class="w3-right">
+  		  <button type="submit" name="modify" formaction="/modify" onclick="return setProgress()" class="w3-btn-floating-large w3-teal">Save</button>
+  	  </div>
+      <div class="w3-center">
+       &nbsp &nbsp &nbsp
+         <input type="text" name="name" style="text-align:center;" value="{{name}}" readonly>
+        <!-- <h2>{{name}}</h2> -->
+      </div>
+    </div>
+  </div> <br/>
+  <!-- !PAGE CONTENT! -->
+  <div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
+    <div class="w3-center">
+      <h3>Subtasks</h3>
+      <input type="text" name="subtask1" id="subtask1" value="{{subtask1}}" class="subtask" style="text-align:center;"> 
+      <input type="checkbox" name="subtask1status" id="subtask1status" value="checked" {{subtask1status}}>
+      <br/> <br/>
+      <input type="text" name="subtask2" id="subtask2" value="{{subtask2}}" class="subtask" style="text-align:center;"> 
+      <input type="checkbox" name="subtask2status" id="subtask2status" value="checked" {{subtask2status}}> 
+      <br/> <br/>
+      <input type="text" name="subtask3" id="subtask3" value="{{subtask3}}" class="subtask" style="text-align:center;"> 
+      <input type="checkbox" name="subtask3status" id="subtask3status" value="checked" {{subtask3status}}> 
+      <br/> <br/>
+      <h4>Difficulty</h4>
+      <input type="range" name="difficulty" min="1" max="5" value="{{difficulty}}">
+      <h4>Duration</h4>
+      <input type="number" name="duration" min="1" max="10" value="{{duration}}"> hour(s)
+      <h4>Reminders</h4>
+      &nbsp &nbsp &nbsp &nbsp Start By:
+      <input type="datetime-local" name="startdate" value="{{startdate}}"> <br/> <br/>
+      Remind <input type="number" name="startreminder" min="0" step="10" max="180" value="{{startreminder}}"> minutes before start <br/> <br/>
+      Complete By:
+      <input type="datetime-local" name="enddate" value="{{enddate}}"> <br/> <br/>
+      Remind <input type="number" name="endreminder" min="0" step="10" max="180" value="{{endreminder}}"> minutes before due <br/> <br/>
+      <input type="number" name="progress" id="progress" min="0" max="100" value="0" hidden>
+      <input type="text" name="complete" id="complete" value="" hidden>
+      <input type="submit" name="delete" formaction="/remove" value="Delete" class="w3-btn">
+    </div>
+  </div>
+
+
+  <!-- End page content -->
+  </div>
+
+  <script>
+    // Script to open and close sidenav
+    function w3_open() {
+        document.getElementById("mySidenav").style.display = "block";
+    }
+     
+    function w3_close() {
+        document.getElementById("mySidenav").style.display = "none";
+    }
+  </script>
+
+  <script type="text/javascript">
+    function setProgress() {
+
+      // Set progress from subtasks
+      var prog = 0;
+      if (document.getElementById("subtask1").value.replace(/ /g,'') != ''
+         && document.getElementById("subtask1status").checked == true) {
+        prog += 33;
+      }
+      if (document.getElementById("subtask2").value.replace(/ /g,'') != ''
+         && document.getElementById("subtask2status").checked == true) {
+        prog += 33;
+      }
+      if (document.getElementById("subtask3").value.replace(/ /g,'') != ''
+         && document.getElementById("subtask3status").checked == true) {
+        prog += 33;
+      }
+      if (prog === 99) {
+        prog = 100;
+      }
+      document.getElementById("progress").value = prog;
+
+      // Popup confirmation
+      if (prog === 100) {
+        if (confirm("You have marked all subtasks as completed. This task will accordingly be move to your 'History' tab.") == false) {
+          return false;
+        }
+        else {
+          document.getElementById("complete").value = "yes";
+        }
+      }
+
+      // Return to home menu
+      window.location.href = '/';
+    }
+  </script>
+
+  </body>
+</html>

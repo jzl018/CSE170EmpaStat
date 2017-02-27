@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+  <head> 
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+    <title>Endeavor</title> 
+  </head>
+  <div class="header">
+    <div class="dashboard">
+      <ul>
+        <li><a class="dashboardactive" href="./pages/tasks.html">Tasks</a></li>
+        <li><a href="pages/challenges.html">Challenges</a></li>
+        <li><a href="pages/profile.html">Profile</a></li>
+        <li><a href="pages/history.html">History</a></li>
+        <!--
+        <li class="dashboardicon">
+          <a href="javascript:void(0);" style="font-size:15px;" onclick="myFunction()">☰</a>
+        </li>
+      -->
+      </ul>
+    </div>
+    <div class="date">
+      <h2>February 7, 2017</h2>
+      <!--
+      <h2 id="thisdate"></h2>
+      <script>
+        var monthNames = ["January", "February", "March", "April", "May", "June",
+          "July", "August", "September", "October", "November", "December"
+        ];
+        n =  new Date();
+        y = n.getFullYear();
+        m = n.getMonth();
+        d = n.getDate();
+        document.getElementById("thisdate").innerHTML = monthNames[m] + " " + d + ", " + y;
+      </script>
+      -->
+    </div>
+    <div class="help">
+      <button type="button">Help</button>
+    </div>
+  </div>
+
+  <br>
+
+  <div class="task">
+    <progress id="task1" value="50" max="100"></progress>
+    <button type="button">Task 1</button> <br>
+    <progress id="task2" value="50" max="100"></progress>
+    <button type="button">Task 2</button> <br>
+    <progress id="task3" value="33" max="100"></progress>
+    <button type="button">Task 3</button> <br>
+    <progress id="task4" value="0" max="100"></progress>
+    <button type="button">Task 4</button> <br>
+  </div>
+
+  <br>
+
+  <div class="add">
+    <button type="button">Add Task</button>
+  </div>
+
+</html>
