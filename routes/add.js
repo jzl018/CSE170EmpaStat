@@ -24,12 +24,18 @@ exports.addTask = function(req, res) {
 	    //console.log(data.categories[i].name + "!=" + name);
 	   }
 
-    //var desc = req.query.description;
-    //var img = 'http://lorempixel.com/400/400/people';
+    // Add task
     data.categories[cindex].tasks.push({tname: tname, category: cname, 
 								    									difficulty: diff, duration: dur, startdate: startd, 
 								    									startreminder: startr, enddate: endd, 
 								    									endreminder: endr, progress: prog, complete: comp});
+
+    // Increment task count
+    data.users[0] = {name: data.users[0].name, streak: data.users[0].streak, 
+    								createdcategories: data.users[0].createdcategories,
+    								createdtasks: data.users[0].createdtasks + 1,
+                    hours: data.users[0].hours, 
+                    completedtasks: data.users[0].completedtasks};
 
     console.log(data);
   

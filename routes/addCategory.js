@@ -6,19 +6,18 @@ exports.addNewCategory = function(req, res) {
 		var prog = req.query.progress;
 		var comp = req.query.complete;
 		var taskarr = [];
+    
+    // Add category
+	data.categories.push({cname: cname, progress: prog, complete: comp, tasks: taskarr});
 
-    //var desc = req.query.description;
-    //var img = 'http://lorempixel.com/400/400/people';
-    /*
-    data.tasks.push({name: name, subtask1: sub1, subtask2: sub2, subtask3: sub3,
-    									subtask1status: sub1s, subtask2status: sub2s, subtask3status: sub3s,  
-    									difficulty: diff, duration: dur, startdate: startd, 
-    									startreminder: startr, enddate: endd, 
-    									endreminder: endr, progress: prog, complete: comp}); */
+    // Increment category count
+    data.users[0] = {name: data.users[0].name, streak: data.users[0].streak, 
+                                    createdcategories: data.users[0].createdcategories + 1,
+                                    createdtasks: data.users[0].createdtasks,
+                                    hours: data.users[0].hours, 
+                                    completedtasks: data.users[0].completedtasks};
 
-		data.categories.push({cname: cname, progress: prog, complete: comp, tasks: taskarr});
-
-    console.log(data.categories);
+    console.log(data);
   
     res.render('index', data);
 }

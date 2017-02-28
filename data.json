@@ -3,8 +3,10 @@
 		{
 			"name": "Ryan",
 			"streak": 0,
-			"hours": 0,
-			"completedtasks": 1
+			"hours": 0, 
+			"createdcategories": 2,
+			"createdtasks": 5,
+			"completedtasks": 3
 		}
 	],
 	"categories": [
