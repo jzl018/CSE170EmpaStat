@@ -14,7 +14,26 @@
 		<link href="css/w3.css" rel="stylesheet"/>
 	</head>
 
-	<body class="bg-color">
+	<script>
+		function startTime() {
+		    var today = new Date();
+		    var h = today.getHours();
+		    var m = today.getMinutes();
+		    var s = today.getSeconds();
+		    m = checkTime(m);
+		    s = checkTime(s);
+		    document.getElementById('txt').innerHTML =
+		    h + ":" + m + ":" + s;
+		    var t = setTimeout(startTime, 500);
+		}
+		function checkTime(i) {
+		    if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+		    return i;
+		}
+	</script>
+
+
+	<body class="bg-color" onload="startTime()">
 		<!-- Sidenav (hidden by default) -->
 		<nav class="w3-sidenav w3-card-2 w3-top w3-xlarge w3-animate-left" style="display:none;z-index:2;width:40%;min-width:300px" id="mySidenav">
 		  <a href="javascript:void(0)" onclick="w3_close()"
@@ -28,6 +47,7 @@
 		<div class="w3-top">
 		  <div class="w3-xlarge w3-padding-xlarge" style="max-width:1200px;margin:auto">
 		    <div class="w3-opennav w3-left w3-hover-text-grey" onclick="w3_open()">&#9776</div>
+		    <div class="w3-left" id="txt"></div>
 		    <div class="w3-right">
 				  <img src= "/images/info.png" onclick="location.href='help'" class="w3-btn-floating w3-blue">
 			  </div>
