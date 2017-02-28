@@ -17,6 +17,22 @@ h1, h2, h3, h4, h5 {
   background-color: #FAFAFA;
 }
 
+
+.w3-top {
+  background-color: #4990E2;
+}
+
+
+#thisdate{ 
+  font-family: "HelveticaNeue-CondensedBold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #FFFFFF;
+  font-size: 24px;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
 .anagram {
 	width: 999999;
 }
