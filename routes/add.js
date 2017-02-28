@@ -13,6 +13,8 @@ exports.addTask = function(req, res) {
 		var prog = req.query.progress;
 		var comp = req.query.complete;
 
+		var createdtasks = data.users[0].createdtasks + 1
+
 		// Find this category
 	  var cindex = 0;
 	  for (i = 0; i < data.categories.length; i++) { 
@@ -25,7 +27,8 @@ exports.addTask = function(req, res) {
 	   }
 
     // Add task
-    data.categories[cindex].tasks.push({tname: tname, category: cname, 
+    data.categories[cindex].tasks.push({tid: createdtasks, 
+    																	tname: tname, category: cname, 
 								    									difficulty: diff, duration: dur, startdate: startd, 
 								    									startreminder: startr, enddate: endd, 
 								    									endreminder: endr, progress: prog, complete: comp});
@@ -33,7 +36,7 @@ exports.addTask = function(req, res) {
     // Increment task count
     data.users[0] = {name: data.users[0].name, streak: data.users[0].streak, 
     								createdcategories: data.users[0].createdcategories,
-    								createdtasks: data.users[0].createdtasks + 1,
+    								createdtasks: createdtasks,
                     hours: data.users[0].hours, 
                     completedtasks: data.users[0].completedtasks};
 

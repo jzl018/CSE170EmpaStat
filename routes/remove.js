@@ -2,6 +2,8 @@ var data = require("../data.json");
 
 exports.removeTask = function(req, res) {   
     // Your code goes here
+    var cid = req.query.cid;
+    var tid = req.query.tid;
     var cname = req.query.cname;
     var tname = req.query.tname;
     var diff = req.query.difficulty;
@@ -18,8 +20,8 @@ exports.removeTask = function(req, res) {
     // Find this category
     var cindex = 0;
     for (i = 0; i < data.categories.length; i++) { 
-    console.log(data.categories[i].cname + "===" + cname);
-      if (data.categories[i].cname === cname) {
+    console.log(data.categories[i].cid + "===" + cid);
+      if (data.categories[i].cid == cid) {
         cindex = i;
         break;
       }
@@ -29,8 +31,8 @@ exports.removeTask = function(req, res) {
     // Find this task
     var index = 0;
     for (i = 0; i < data.categories[cindex].tasks.length; i++) {
-     console.log(data.categories[cindex].tasks[i].tname + "==" + tname); 
-      if (data.categories[cindex].tasks[i].tname === tname) {
+     console.log(data.categories[cindex].tasks[i].tid + "==" + tid); 
+      if (data.categories[cindex].tasks[i].tid == tid) {
           // console.log(data.categories[cindex].tasks[i].tname + "==" + tname);
           index = i;
           break;

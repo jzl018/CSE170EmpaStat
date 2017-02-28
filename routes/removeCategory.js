@@ -2,6 +2,7 @@ var data = require("../data.json");
 
 exports.removeCategory = function(req, res) {   
     // Your code goes here
+    var cid = req.query.cid;
     var cname = req.query.cname;
 
     //var desc = req.query.description;
@@ -10,8 +11,8 @@ exports.removeCategory = function(req, res) {
     // Find this category
     var cindex = 0;
     for (i = 0; i < data.categories.length; i++) { 
-    console.log(data.categories[i].cname + "===" + cname);
-      if (data.categories[i].cname === cname) {
+    //console.log(data.categories[i].cid + "==" + cid);
+      if (data.categories[i].cid == cid) {
         cindex = i;
         break;
       }

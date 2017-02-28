@@ -11,11 +11,13 @@
 	],
 	"categories": [
 		{
+			"cid": 1,
 			"cname": "Math",
 			"progress": "75",
 			"complete": "",
 			"tasks": [
 				{
+					"tid": 1,
 					"tname": "Study for Exam",
 					"category": "Math",
 					"difficulty": "4",
@@ -38,6 +40,7 @@
 					"complete": "yes"
 				},
 				{
+					"tid": 3,
 					"tname": "Talk to Professor",
 					"category": "Math",
 					"difficulty": "2",
@@ -49,6 +52,7 @@
 					"complete": ""
 				},
 				{
+					"tid": 4,
 					"tname": "Read next Chapter",
 					"category": "Math",
 					"difficulty": "1",
@@ -62,11 +66,13 @@
 			]
 		},
 		{
+			"cid": 2,
 			"cname": "Science",
 			"progress": "0",
 			"complete": "",
 			"tasks": [
 				{
+					"tid": 5,
 					"tname": "Finish Lab",
 					"category": "Science",
 					"difficulty": "4",

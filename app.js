@@ -13,6 +13,7 @@ var login = require('./routes/login');
 var help = require('./routes/help');
 var category = require('./routes/category');
 var addcategory = require('./routes/addCategory');
+var modifycategory = require('./routes/modifyCategory');
 var removecategory = require('./routes/removeCategory');
 var newtask = require('./routes/newTask');
 var task = require('./routes/task');
@@ -50,14 +51,15 @@ if ('development' == app.get('env')) {
 app.get('/', index.view);
 app.get('/login', login.viewLogin);
 app.get('/help', help.viewHelp);
-app.get('/category/:cname', category.viewCategory);
+app.get('/category/:cid', category.viewCategory);
 app.get('/addcategory', addcategory.addNewCategory);
+app.get('/modifycategory', modifycategory.modifyCategory);
 app.get('/removecategory', removecategory.removeCategory);
-app.get('/category/:cname/newtask', newtask.viewNewTask)
-app.get('/category/:cname/task/:tname', task.viewTask);
-app.get('/category/:cname/add', add.addTask);
-app.get('/category/:cname/modify', modify.modifyTask);
-app.get('/category/:cname/remove', remove.removeTask);
+app.get('/category/:cid/newtask', newtask.viewNewTask)
+app.get('/category/:cid/task/:tid', task.viewTask);
+app.get('/category/:cid/add', add.addTask);
+app.get('/category/:cid/modify', modify.modifyTask);
+app.get('/category/:cid/remove', remove.removeTask);
 app.get('/profile', profile.viewProfile);
 app.get('/history', history.viewHistory);
 // Example route

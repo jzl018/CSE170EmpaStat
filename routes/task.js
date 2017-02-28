@@ -3,13 +3,13 @@ var data = require('../data.json');
 
 exports.viewTask = function(req, res) {
   // controller code goes here
-  var cname = req.params.cname;
-  var tname = req.params.tname;
+  var cid = req.params.cid;
+  var tid = req.params.tid;
 
   // Find this category
   var cindex = 0;
   for (i = 0; i < data.categories.length; i++) { 
-    if (data.categories[i].cname === cname) {
+    if (data.categories[i].cid == cid) {
       //console.log(data.categories[i].name + "===" + name);
       cindex = i;
       break;
@@ -21,7 +21,7 @@ exports.viewTask = function(req, res) {
   var index = 0;
   for (i = 0; i < data.categories[cindex].tasks.length; i++) {
    //console.log(data.categories[cindex].tasks[i].tname + "==" + tname); 
-   	if (data.categories[cindex].tasks[i].tname === tname) {
+   	if (data.categories[cindex].tasks[i].tid == tid) {
    		// console.log(data.categories[cindex].tasks[i].tname + "==" + tname);
    		index = i;
    		break;
@@ -30,6 +30,9 @@ exports.viewTask = function(req, res) {
    }
 
   var thistask = data.categories[cindex].tasks[index];
+  //var categoryid = {cid: data.categories[cindex].cid};
+  //thistask.push(categoryid);
+  thistask.cid = data.categories[cindex].cid;
   console.log(thistask);
   res.render('task', thistask);
 };
