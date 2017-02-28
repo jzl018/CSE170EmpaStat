@@ -2,6 +2,7 @@ var data = require("../data.json");
 
 exports.addTask = function(req, res) {   
 	// Your code goes here
+		var cid = req.query.cid;
 		var cname = req.query.cname;
 		var tname = req.query.tname;
 		var diff = req.query.difficulty;
@@ -15,10 +16,13 @@ exports.addTask = function(req, res) {
 
 		var createdtasks = data.users[0].createdtasks + 1
 
+		console.log(cid);
+
 		// Find this category
 	  var cindex = 0;
 	  for (i = 0; i < data.categories.length; i++) { 
-	    if (data.categories[i].cname === cname) {
+	  	//console.log(data.categories[i].cid + "==" + cid);
+	    if (data.categories[i].cid == cid) {
 	      //console.log(data.categories[i].name + "===" + name);
 	      cindex = i;
 	      break;
