@@ -13,6 +13,7 @@ var login = require('./routes/login');
 var help = require('./routes/help');
 var category = require('./routes/category');
 var addcategory = require('./routes/addCategory');
+var removecategory = require('./routes/removeCategory');
 var newtask = require('./routes/newTask');
 var task = require('./routes/task');
 var add = require('./routes/add');
@@ -51,6 +52,7 @@ app.get('/login', login.viewLogin);
 app.get('/help', help.viewHelp);
 app.get('/category/:cname', category.viewCategory);
 app.get('/addcategory', addcategory.addNewCategory);
+app.get('/removecategory', removecategory.removeCategory);
 app.get('/category/:cname/newtask', newtask.viewNewTask)
 app.get('/category/:cname/task/:tname', task.viewTask);
 app.get('/category/:cname/add', add.addTask);
