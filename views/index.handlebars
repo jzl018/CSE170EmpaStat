@@ -47,9 +47,9 @@
 		<div class="w3-top">
 		  <div class="w3-xlarge w3-padding-xlarge" style="max-width:1200px;margin:auto">
 		    <div class="w3-opennav w3-left w3-hover-text-grey" onclick="w3_open()">&#9776</div>
-		    <div class="w3-left" id="txt"></div>
+		    
 		    <div class="w3-right">
-				  <img src= "/images/info.png" onclick="location.href='help'" class="w3-btn-floating w3-blue">
+				  <img src= "/images/info.png" onclick="location.href='help'" class="w3-btn-floating" style ="background-color: #4990E2">
 			  </div>
 		    <div class="w3-center" id="thisdate"></div>
 		    <script>
@@ -68,7 +68,9 @@
 		<br/> <br/> <br/> <br/>
 
 		<div class="container">	
+			<div class="w3-center" id="txt"></div> </br>
 			<div class="d-inline-block bg-warning text-center">
+				
 				{{#each categories}}
 					{{#unless complete}}
 						<div class="friend">
