@@ -43,11 +43,13 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
   <div class="container"> 
       <div class="d-inline-block bg-warning text-center">
         {{#each tasks}}
+          {{#unless complete}}
             <div class="friend">
               <a href="/category/{{../cid}}/task/{{tid}}" id="tasklink" class="btn btn-primary btn-lg btn-block">{{tname}}</a>
               <input type="text" name="tname" id="tname" value="{{tname}}" hidden>
               <progress value="0" max="100"></progress>
             </div>
+          {{/unless}}
         {{/each}}
       </div>
       <br/>

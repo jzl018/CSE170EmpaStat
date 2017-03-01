@@ -38,13 +38,15 @@
 
 		<div class="container">		
 			<div class="d-inline-block bg-warning text-center">
-				{{#each tasks}}
-					{{#if complete}}
-						<div class="friend">
-							<a href="task/{{name}}" class="btn btn-primary btn-lg btn-block">{{name}}</a>
-							<progress value={{progress}} max="100"></progress>
-						</div>
-					{{/if}}
+				{{#each categories}}
+					{{#each tasks}}
+						{{#if complete}}
+							<div class="friend">
+								<a href="/category/{{../cid}}/task/{{tid}}" class="btn btn-primary btn-lg btn-block">{{tname}}</a>
+								<progress value={{progress}} max="100"></progress>
+							</div>
+						{{/if}}
+					{{/each}}
 				{{/each}}
 			</div>
 		</div>
