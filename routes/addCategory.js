@@ -19,6 +19,26 @@ exports.addNewCategory = function(req, res) {
                                     createdtasks: data.users[0].createdtasks,
                                     completedtasks: data.users[0].completedtasks};
 
+    // Update challenges data
+    for (i = 0; i < data.challenges.length; i++) { 
+        if (data.users[0].completedtasks >= data.challenges[i].rcompletetasks && 
+            data.users[0].createdcategories >= data.challenges[i].rcreatecategories &&
+            data.users[0].createdtasks >= data.challenges[i].rcreatetasks) {
+            data.challenges[i] = {name: data.challenges[i].name, 
+                                    rcreatecategories: data.challenges[i].rcreatecategories,
+                                    rcreatetasks: data.challenges[i].rcreatetasks,
+                                    rcompletetasks: data.challenges[i].rcompletetasks,
+                                    complete: "yes"};
+        }
+        else {
+            data.challenges[i] = {name: data.challenges[i].name, 
+                                    rcreatecategories: data.challenges[i].rcreatecategories,
+                                    rcreatetasks: data.challenges[i].rcreatetasks,
+                                    rcompletetasks: data.challenges[i].rcompletetasks,
+                                    complete: ""};
+        }
+    }
+
     console.log(data);
   
     res.render('index', data);

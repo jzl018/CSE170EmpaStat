@@ -50,12 +50,32 @@ exports.modifyTask = function(req, res) {
                         					endreminder: endr, progress: prog, complete: comp};
 
     // Increment completed task count
+    var comptasks = data.users[0].completedtasks + 1;
     if (comp === "yes") {
-      var comptasks = data.users[0].completedtasks + 1;
       data.users[0] = {name: data.users[0].name, 
                       createdcategories: data.users[0].createdcategories,
                       createdtasks: data.users[0].createdtasks,
                       completedtasks: comptasks};
+    }
+
+    // Update challenges data
+    for (i = 0; i < data.challenges.length; i++) { 
+        if (data.users[0].completedtasks >= data.challenges[i].rcompletetasks && 
+            data.users[0].createdcategories >= data.challenges[i].rcreatecategories &&
+            data.users[0].createdtasks >= data.challenges[i].rcreatetasks) {
+            data.challenges[i] = {name: data.challenges[i].name, 
+                                    rcreatecategories: data.challenges[i].rcreatecategories,
+                                    rcreatetasks: data.challenges[i].rcreatetasks,
+                                    rcompletetasks: data.challenges[i].rcompletetasks,
+                                    complete: "yes"};
+        }
+        else {
+            data.challenges[i] = {name: data.challenges[i].name, 
+                                    rcreatecategories: data.challenges[i].rcreatecategories,
+                                    rcreatetasks: data.challenges[i].rcreatetasks,
+                                    rcompletetasks: data.challenges[i].rcompletetasks,
+                                    complete: ""};
+        }
     }
 
     res.render('category', data.categories[cindex]);
