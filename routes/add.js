@@ -38,11 +38,26 @@ exports.addTask = function(req, res) {
 								    									endreminder: endr, progress: prog, complete: comp});
 
     // Increment task count
-    data.users[0] = {name: data.users[0].name, streak: data.users[0].streak, 
+    data.users[0] = {name: data.users[0].name,
     								createdcategories: data.users[0].createdcategories,
     								createdtasks: createdtasks,
-                    hours: data.users[0].hours, 
                     completedtasks: data.users[0].completedtasks};
+
+    // Update challenges data
+    /*
+    for (i = 0; i < data.challenges.length; i++) { 
+        if (createdtasks >= data.challenges[i].required) {
+            data.challenges[i] = {name: data.challenges[i].name, 
+                                 required: data.challenges[i].required,
+                                 complete: "yes"};
+        }
+        else {
+            data.challenges[i] = {name: data.challenges[i].name, 
+                                 required: data.challenges[i].required,
+                                 complete: ""};
+        }
+    }
+    */
 
     console.log(data);
   

@@ -14,10 +14,9 @@ exports.addNewCategory = function(req, res) {
                         cname: cname, progress: prog, complete: comp, tasks: taskarr});
 
     // Increment category count
-    data.users[0] = {name: data.users[0].name, streak: data.users[0].streak, 
+    data.users[0] = {name: data.users[0].name, 
                                     createdcategories: createdcategories,
                                     createdtasks: data.users[0].createdtasks,
-                                    hours: data.users[0].hours, 
                                     completedtasks: data.users[0].completedtasks};
 
     console.log(data);

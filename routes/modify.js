@@ -49,5 +49,14 @@ exports.modifyTask = function(req, res) {
                         					startreminder: startr, enddate: endd, 
                         					endreminder: endr, progress: prog, complete: comp};
 
+    // Increment completed task count
+    if (comp === "yes") {
+      var comptasks = data.users[0].completedtasks + 1;
+      data.users[0] = {name: data.users[0].name, 
+                      createdcategories: data.users[0].createdcategories,
+                      createdtasks: data.users[0].createdtasks,
+                      completedtasks: comptasks};
+    }
+
     res.render('category', data.categories[cindex]);
 }

@@ -2,8 +2,6 @@
 	"users": [
 		{
 			"name": "Ryan",
-			"streak": 0,
-			"hours": 0, 
 			"createdcategories": 2,
 			"createdtasks": 5,
 			"completedtasks": 3
@@ -40,7 +38,7 @@
 					"startreminder": "30",
 					"enddate": "2017-02-23T23:59",
 					"endreminder": "120",
-					"complete": "yes"
+					"complete": ""
 				},
 				{
 					"tid": 3,
@@ -95,22 +93,86 @@
 "challenges": [
 		{
 			"name": "Complete 1 Task",
-			"required": 1,
+			"rcreatecategories": 0, 
+			"rcreatetasks": 0, 
+			"rcompletetasks": 1,
 			"complete": "yes"
 		},
 		{
 			"name": "Complete 3 Tasks",
-			"required": 3,
+			"rcreatecategories": 0, 
+			"rcreatetasks": 0, 
+			"rcompletetasks": 3,
 			"complete": ""
 		},
 		{
 			"name": "Complete 10 Tasks",
-			"required": 10,
+			"rcreatecategories": 0, 
+			"rcreatetasks": 0, 
+			"rcompletetasks": 10,
 			"complete": ""	
 		},
 		{
 			"name": "Complete 25 Tasks",
-			"required": 25,
+			"rcreatecategories": 0, 
+			"rcreatetasks": 0, 
+			"rcompletetasks": 25,
+			"complete": ""
+		},
+		{
+			"name": "Create 1 Task",
+			"rcreatecategories": 0, 
+			"rcreatetasks": 1, 
+			"rcompletetasks": 0,
+			"complete": "yes"
+		},
+		{
+			"name": "Create 3 Tasks",
+			"rcreatecategories": 0, 
+			"rcreatetasks": 3, 
+			"rcompletetasks": 0,
+			"complete": "yes"
+		},
+		{
+			"name": "Create 10 Tasks",
+			"rcreatecategories": 0, 
+			"rcreatetasks": 10, 
+			"rcompletetasks": 0,
+			"complete": ""	
+		},
+		{
+			"name": "Create 25 Tasks",
+			"rcreatecategories": 0, 
+			"rcreatetasks": 25, 
+			"rcompletetasks": 0,
+			"complete": ""
+		}, 
+		{
+			"name": "Create 1 Category",
+			"rcreatecategories": 1, 
+			"rcreatetasks": 0, 
+			"rcompletetasks": 0,
+			"complete": "yes"
+		},
+		{
+			"name": "Create 3 Categories",
+			"rcreatecategories": 3, 
+			"rcreatetasks": 0, 
+			"rcompletetasks": 0,
+			"complete": ""
+		},
+		{
+			"name": "Create 10 Categories",
+			"rcreatecategories": 10, 
+			"rcreatetasks": 0, 
+			"rcompletetasks": 0,
+			"complete": ""	
+		},
+		{
+			"name": "Create 25 Categories",
+			"rcreatecategories": 25, 
+			"rcreatetasks": 0, 
+			"rcompletetasks": 0,
 			"complete": ""
 		}
 	]
