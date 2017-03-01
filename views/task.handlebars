@@ -41,6 +41,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
   <div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
     <div class="w3-center">
       <br/> <br/>
+      Complete <input type="checkbox" name="complete" id="complete" value="yes">
       <input type="number" name="tid" value="{{tid}}" hidden>
       <h4>Difficulty</h4>
       <input type="range" name="difficulty" min="1" max="5" value="{{difficulty}}">
@@ -54,7 +55,6 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
       <input type="datetime-local" name="enddate" value="{{enddate}}"> <br/> <br/>
       Remind <input type="number" name="endreminder" min="0" step="10" max="180" value="{{endreminder}}"> minutes before due <br/> <br/>
       <input type="number" name="progress" id="progress" min="0" max="100" value="0" hidden>
-      <input type="text" name="complete" id="complete" value="" hidden>
       <input type="submit" name="delete" formaction="/category/{{cid}}/remove" value="Delete" class="w3-btn">
     </div>
   </div>
