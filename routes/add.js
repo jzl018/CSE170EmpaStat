@@ -32,7 +32,7 @@ exports.addTask = function(req, res) {
 
     // Add task
     data.categories[cindex].tasks.push({tid: createdtasks, 
-    																	tname: tname, category: cname, 
+    																	tname: tname, cid: cid, category: cname, 
 								    									difficulty: diff, duration: dur, startdate: startd, 
 								    									startreminder: startr, enddate: endd, 
 								    									endreminder: endr, progress: prog, complete: comp});

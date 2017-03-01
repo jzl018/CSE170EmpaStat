@@ -43,8 +43,8 @@ exports.modifyTask = function(req, res) {
       
     console.log("Overwriting: " + data.categories[cindex].tasks[index].name);
 
-    data.categories[cindex].tasks[index] = {tid: tid,
-                                  tname: tname, category: cname, 
+    data.categories[cindex].tasks[index] = {tid: tid, 
+                                  tname: tname, cid: cid, category: cname, 
                         					difficulty: diff, duration: dur, startdate: startd, 
                         					startreminder: startr, enddate: endd, 
                         					endreminder: endr, progress: prog, complete: comp};

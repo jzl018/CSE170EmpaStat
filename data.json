@@ -19,6 +19,7 @@
 				{
 					"tid": 1,
 					"tname": "Study for Exam",
+					"cid": 1, 
 					"category": "Math",
 					"difficulty": "4",
 					"duration": "6",
@@ -31,6 +32,7 @@
 				{
 					"tid": 2,
 					"tname": "Finish Homework",
+					"cid": 1, 
 					"category": "Math",
 					"difficulty": "4",
 					"duration": "3",
@@ -43,6 +45,7 @@
 				{
 					"tid": 3,
 					"tname": "Talk to Professor",
+					"cid": 1, 
 					"category": "Math",
 					"difficulty": "2",
 					"duration": "1",
@@ -55,6 +58,7 @@
 				{
 					"tid": 4,
 					"tname": "Read next Chapter",
+					"cid": 1, 
 					"category": "Math",
 					"difficulty": "1",
 					"duration": "2",
@@ -75,6 +79,7 @@
 				{
 					"tid": 5,
 					"tname": "Finish Lab",
+					"cid": 2, 
 					"category": "Science",
 					"difficulty": "4",
 					"duration": "3",
