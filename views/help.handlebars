@@ -15,7 +15,7 @@
 	</head>
 
 	<body>
-		<!-- Sidenav (hidden by default) -->
+		<!-- Sidenav (hidden by default)
 		<nav class="w3-sidenav w3-card-2 w3-top w3-xlarge w3-animate-left" style="display:none;z-index:2;width:40%;min-width:300px" id="mySidenav">
 		  <a href="javascript:void(0)" onclick="w3_close()"
 		  class="w3-closenav">Close Menu</a>
@@ -23,12 +23,32 @@
 		  <a href="profile" onclick="w3_close()">Profile</a>
 		  <a href="history" onclick="w3_close()">History</a>
 		  <a href="login" onclick="w3_close()">Logout</a>
-
 		</nav>
+	-->
+
+		<!-- Bottom navigation -->
+		<nav class="navbar navbar-inverse navbar-fixed-bottom">
+  			<div class="container-fluid">
+    			<div class="navbar-header">
+      				<h4 class="navbar-text">Multus</h4>
+    			</div>
+    			<ul class="nav navbar-nav">
+      				<li><a href="/"><span class="glyphicon glyphicon-tasks"></span> Tasks</a></li>
+      				<li><a href="profile"><span class="glyphicon glyphicon-user"></span> Profile</a></li>
+	      			<li><a href="history"><span class="glyphicon glyphicon-calendar"></span> History</a></li>
+	      	    </ul>
+	      		<ul class="nav navbar-nav navbar-right">
+			    	<li><a href="login"><span class="glyphicon glyphicon-log-out"></span> Logout   </a></li>
+   				</ul>
+  			</div>
+		</nav>
+
 		<!-- Top menu -->
 		<div class="w3-top">
 		  <div class="w3-white w3-xlarge w3-padding-xlarge" style="max-width:1200px;margin:auto">
+		  	<!-- Comment out line for bottom nav
 		    <div class="w3-opennav w3-left w3-hover-text-grey" onclick="w3_open()">&#9776</div>
+		-->
 		    <div class="w3-right">
 				  <button type="button" onclick="location.href='help'" class="w3-btn-floating w3-teal">?</button>
 			  </div>
