@@ -10,4 +10,4 @@ exports.view = function(req, res){
 exports.viewBottom = function(req, res){
 	data["side"] = false;
 	res.render('index', data);
-}
+};
