@@ -62,6 +62,8 @@ app.get('/category/:cid/modify', modify.modifyTask);
 app.get('/category/:cid/remove', remove.removeTask);
 app.get('/profile', profile.viewProfile);
 app.get('/history', history.viewHistory);
+//for A/B Testing
+app.get('/home_B', index.viewBottom);
 // Example route
 // app.get('/users', user.list);
 
