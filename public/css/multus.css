@@ -10,7 +10,7 @@
 }
 
 h1, h2, h3, h4, h5 {
-	color: #8382BF;
+	color: #575757;
 }
 
 .bg-color {
@@ -22,11 +22,68 @@ h1, h2, h3, h4, h5 {
   background-color: #4990E2;
 }
 
+.icon-color {
+  background-color: #4990E2;
+}
+
+#txt {
+  font-family: "HelveticaNeue-CondensedBold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #575757;
+  font-size: 24px;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
 
 #thisdate{ 
   font-family: "HelveticaNeue-CondensedBold", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #FFFFFF;
   font-size: 24px;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+#cname { 
+  font-family: "HelveticaNeue-CondensedBold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #FFFFFF;
+  background-color: #4990E2;
+  font-size: 24px;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.top-center{ 
+  font-family: "HelveticaNeue-CondensedBold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #FFFFFF;
+  font-size: 24px;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+p {
+  font-size: 20px;
+}
+
+#mySidenav {
+  font-family: "HelveticaNeue-CondensedBold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #575757;
+  font-size: 24px;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+#text-design {
+  font-family: "HelveticaNeue-CondensedBold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #575757;
   font-style: normal;
   font-variant: normal;
   text-transform: uppercase;
