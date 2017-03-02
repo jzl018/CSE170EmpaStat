@@ -37,6 +37,8 @@ exports.addTask = function(req, res) {
 								    									startreminder: startr, enddate: endd, 
 								    									endreminder: endr, progress: prog, complete: comp});
 
+    console.log(data.categories[cindex].tasks);
+
     // Increment task count
     data.users[0] = {name: data.users[0].name,
     								createdcategories: data.users[0].createdcategories,
@@ -63,7 +65,7 @@ exports.addTask = function(req, res) {
         }
     }
 
-    console.log(data);
+    //console.log(data);
   
     res.render('category', data.categories[cindex]);
 }
