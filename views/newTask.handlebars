@@ -26,7 +26,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
         <h3><a href="/category/{{cid}}" style="text-decoration:none;">X</a></h3>
       </div>
       <div class="w3-right">
-  		  <img src= "/images/info.png" onclick="location.href='help'" class="w3-btn-floating" style ="background-color: #4990E2">
+  		    <button type="submit" onsubmit="location.href='location.href'/category/{{cid}}"  class="w3-btn-floating-large w3-teal">Save</button>
         <input type="text" name="cname" id="cname" value="{{cname}}" hidden>
         <input type="number" name="cid" id="cid" value="{{cid}}" hidden>
         <input type="text" name="complete" value="" hidden>
@@ -56,6 +56,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
       <input type="number" name="progress" min="0" max="100" value="0" hidden>
       <input type="text" name="complete" id="complete" value="" hidden>
       <input type="reset" value="Clear" class="w3-btn">
+
     </div>
   </div>
 
