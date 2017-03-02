@@ -11,6 +11,8 @@
 
 h1, h2, h3, h4, h5 {
 	color: #575757;
+  font-family: "HelveticaNeue-CondensedBold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
 }
 
 .bg-color {
@@ -46,7 +48,7 @@ h1, h2, h3, h4, h5 {
   letter-spacing: 2px;
 }
 
-#cname { 
+/*#cname { 
   font-family: "HelveticaNeue-CondensedBold", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #FFFFFF;
   background-color: #4990E2;
@@ -56,7 +58,7 @@ h1, h2, h3, h4, h5 {
   text-transform: uppercase;
   letter-spacing: 2px;
 }
-
+*/
 .top-center{ 
   font-family: "HelveticaNeue-CondensedBold", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #FFFFFF;
@@ -89,6 +91,22 @@ p {
   text-transform: uppercase;
   letter-spacing: 2px;
 }
+
+#category-design {
+  font-family: "HelveticaNeue-CondensedBold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #575757;
+  font-size:24px;
+  font-style: normal;
+  font-variant: normal;
+  letter-spacing: 2px;
+}
+
+#trophy {
+  min-height: 100px;
+  min-width: 100px;
+  margin:0 10px 10px 25px;
+}
+
 
 .anagram {
 	width: 999999;

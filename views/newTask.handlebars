@@ -21,9 +21,9 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
 <!-- Top menu -->
 <form id="addTaskForm" role="form" method="get" action="/category/{{cid}}/add">
   <div class="w3-top">
-    <div class="w3-white w3-xlarge w3-padding-xlarge" style="max-width:1200px;margin:auto">
+    <div class="w3-xlarge w3-padding-xlarge" style="max-width:1200px;margin:auto">
       <div class="w3-opennav w3-left w3-hover-text-grey" onclick="w3_open()">
-        <h3><a href="/category/{{cid}}" style="text-decoration:none;">X</a></h3>
+        <h3><a href="/category/{{cid}}" style="text-decoration:none;" id="thisdate">X</a></h3>
       </div>
       <div class="w3-right">
   		    <button type="submit" onsubmit="location.href='location.href'/category/{{cid}}"  class="w3-btn-floating-large w3-teal">Save</button>
@@ -32,25 +32,25 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
         <input type="text" name="complete" value="" hidden>
         <input type="text" name="progress" value="{{progress}}" hidden>
   	  </div>
-      <div class="w3-center">
+      <div class="w3-center" id="text-design">
         &nbsp &nbsp &nbsp
-        <input type="text" name="tname" placeholder="Task Name" style="text-align:center;" required>
+        <input type="text" name="tname" id="tname" placeholder="Subtask Name" style="text-align:center;" required>
       </div>
     </div>
   </div> <br/>
   <!-- !PAGE CONTENT! -->
-  <div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:100px">
-    <div class="w3-center">
-      <br /> <br/>
-      <h4>Difficulty</h4>
-      <input type="range" name="difficulty" min="1" max="5"> <br/>
-      <h4>Duration</h4>
-      <input type="number" name="duration" min="1" max="10"> hour(s) <br/>
-      <h4>Reminders</h4>
-      &nbsp &nbsp &nbsp &nbsp Start By:
+  <div class="w3-main w3-content w3-padding" id="text-design" style="max-width:1200px;margin-top:100px text-center">
+    <div class="w3-center" id="text-design"><br><br><br>
+      <h4 id="txt">Difficulty</h4>
+      <input type="range" name="difficulty" min="1" max="5"> <br/><br/>
+      <h4 id="txt">Duration</h4>
+      <input type="number" name="duration" min="1" max="10"> hour(s) <br/><br/>
+      <h4 id="txt">Reminders</h4>
+      &nbsp &nbsp &nbsp &nbsp 
+      Start By <br/>
       <input type="datetime-local" name="startdate"> <br/> <br/>
       Remind <input type="number" name="startreminder" min="0" step="10" max="180"> minutes before start <br/> <br/>
-      Complete By:
+      Complete By <br/>
       <input type="datetime-local" name="enddate"> <br/> <br/>
       Remind <input type="number" name="endreminder" min="0" step="10" max="180"> minutes before due <br/> <br/>
       <input type="number" name="progress" min="0" max="100" value="0" hidden>

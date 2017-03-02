@@ -92,34 +92,6 @@
 	],
 "challenges": [
 		{
-			"name": "Complete 1 Task",
-			"rcreatecategories": 0, 
-			"rcreatetasks": 0, 
-			"rcompletetasks": 1,
-			"complete": "yes"
-		},
-		{
-			"name": "Complete 3 Tasks",
-			"rcreatecategories": 0, 
-			"rcreatetasks": 0, 
-			"rcompletetasks": 3,
-			"complete": ""
-		},
-		{
-			"name": "Complete 10 Tasks",
-			"rcreatecategories": 0, 
-			"rcreatetasks": 0, 
-			"rcompletetasks": 10,
-			"complete": ""	
-		},
-		{
-			"name": "Complete 25 Tasks",
-			"rcreatecategories": 0, 
-			"rcreatetasks": 0, 
-			"rcompletetasks": 25,
-			"complete": ""
-		},
-		{
 			"name": "Create 1 Task",
 			"rcreatecategories": 0, 
 			"rcreatetasks": 1, 
@@ -148,21 +120,50 @@
 			"complete": ""
 		}, 
 		{
-			"name": "Create 1 Category",
+			"name": "Finish 1 Task",
+			"rcreatecategories": 0, 
+			"rcreatetasks": 0, 
+			"rcompletetasks": 1,
+			"complete": "yes"
+		},
+		{
+			"name": "Finish 3 Tasks",
+			"rcreatecategories": 0, 
+			"rcreatetasks": 0, 
+			"rcompletetasks": 3,
+			"complete": ""
+		},
+		{
+			"name": "Finish 10 Tasks",
+			"rcreatecategories": 0, 
+			"rcreatetasks": 0, 
+			"rcompletetasks": 10,
+			"complete": ""	
+		},
+		{
+			"name": "Complete 25 Tasks",
+			"rcreatecategories": 0, 
+			"rcreatetasks": 0, 
+			"rcompletetasks": 25,
+			"complete": ""
+		},
+		
+		{
+			"name": "5 Days Streak",
 			"rcreatecategories": 1, 
 			"rcreatetasks": 0, 
 			"rcompletetasks": 0,
 			"complete": "yes"
 		},
 		{
-			"name": "Create 3 Categories",
+			"name": "10 Days Streak",
 			"rcreatecategories": 3, 
 			"rcreatetasks": 0, 
 			"rcompletetasks": 0,
 			"complete": ""
 		},
 		{
-			"name": "Create 10 Categories",
+			"name": "20 Days Streak",
 			"rcreatecategories": 10, 
 			"rcreatetasks": 0, 
 			"rcompletetasks": 0,
