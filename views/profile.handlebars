@@ -17,6 +17,7 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	</head>
+<<<<<<< HEAD
   <body class="bg-color">
 		<!-- Sidenav (hidden by default)
 		<nav class="w3-sidenav w3-card-2 w3-top w3-xlarge w3-animate-left" style="display:none;z-index:2;width:40%;min-width:300px" id="mySidenav">
@@ -45,16 +46,57 @@
    				</ul>
   			</div>
 		</nav>
+=======
+  <body>
+		{{#if side}}
+			<!-- Sidenav (hidden by default) -->
+			<nav class="w3-sidenav w3-card-2 w3-top w3-xlarge w3-animate-left" style="display:none;z-index:2;width:40%;min-width:300px" id="mySidenav">
+			  <a href="javascript:void(0)" onclick="w3_close()"
+			  class="w3-closenav">Close Menu</a>
+			  <a href="/" onclick="w3_close()">Tasks</a>
+			  <a href="profile" onclick="w3_close()">Profile</a>
+			  <a href="history" onclick="w3_close()">Past Tasks</a>
+			  <a href="login" onclick="w3_close()">Logout</a>
+			</nav>
+		{{else}}
+			<!-- Bottom navigation -->
+			<div class="w3-bottom">
+	   			<ul class="nav nav-pills">
+		      		<li><a href="home_B"><span class="glyphicon glyphicon-tasks"></span> Tasks</a></li>
+		      		<li class="active"><a href="profile_B"><span class="glyphicon glyphicon-user"></span> Profile</a></li>
+			      	<li><a href="history_B"><span class="glyphicon glyphicon-calendar"></span> Past Tasks</a></li>
+					<li><a href="login"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+		   		</ul>
+	  		</div>
+		{{/if}}
+>>>>>>> origin/master
 
 		<!-- Top menu -->
 		  <div class="w3-top"> 
 		  	<div class="w3-xlarge w3-padding-xlarge" style="max-width:1200px;margin:auto">
+<<<<<<< HEAD
 		  	<!-- Comment out line for bottom nav
 		    <div class="w3-opennav w3-left w3-hover-text-white" onclick="w3_open()">&#9776</div>
 		-->
 		    <div class="w3-right">
 				   <img src= "/images/info.png" onclick="location.href='help'" class="w3-btn-floating" style ="background-color: #4990E2">
 			  </div>
+=======
+		  	<!-- Unneeded for bottom nav -->
+		  	{{#if side}}
+		    	<div class="w3-opennav w3-left w3-hover-text-white" onclick="w3_open()">&#9776</div>
+		    {{/if}}
+
+		    {{#if side}}
+		    	<div class="w3-right">
+				  	<img src= "/images/info.png" onclick="location.href='help'" class="w3-btn-floating" style ="background-color: #4990E2">
+				</div>
+			{{else}}
+		    	<div class="w3-right">
+					<img src= "/images/info.png" onclick="location.href='help_B'" class="w3-btn-floating" style ="background-color: #4990E2">
+				</div>
+			{{/if}}
+>>>>>>> origin/master
 		    <div class="w3-center top-center">&nbsp; Profile</div>
 		  </div>
 		</div>
