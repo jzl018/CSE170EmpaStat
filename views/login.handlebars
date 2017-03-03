@@ -13,19 +13,22 @@
     <link href="css/w3.css" rel="stylesheet"/>
   </head>
 
-  <div class="w3-top">
+<body class="bg-color">
+  <!-- <div class="w3-top">
       <div class="w3-xlarge w3-padding-xlarge" style="max-width:1200px;margin:auto">
-        <div class="w3-right">
-          <button type="button" onclick="loginHelp()" class="w3-btn-floating w3-teal">?</button>
+       <div class="w3-right">
+            <img src= "/images/info.png" onclick="location.href='help'" class="w3-btn-floating" style ="background-color: #4990E2">
         </div>
         <div class="w3-center" id="thisdate">&nbsp; Login</div>
       </div>
-  </div>
-
+  </div> -->
   <br/> <br/> <br/> <br/> 
 
-  <div class="container">
-    <form class="form-signin">
+  <div class="container"> <br><br><br>
+      <div class="w3-center">
+        <img src= "/images/logo.png" style ="background-color: #FAFAFA;" id="logo-title"> <br><br><br><br><br><br><br>
+      </div>
+    <form class="form-signin" algin="center">
       <label for="inputEmail" class="sr-only">Email address</label>
       <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus="">
       <br/>
@@ -36,17 +39,21 @@
             <input type="checkbox" value="remember-me"> Remember me
           </label>
       </div>
+      <!-- //btn-lg btn-primary btn-block// -->
       {{#if side}}
-        <button class="btn btn-lg btn-primary btn-block" type="submit" type="submit" formaction="/">Sign in</button>
+        <button class="btn btn-block w3-button" type="submit" type="submit" id="login-button" formaction="/">Sign in</button>
       {{else}}
-        <button class="btn btn-lg btn-primary btn-block" type="submit" type="submit" formaction="home_B">Sign in</button>
+        <button class="btn bt-block w3-button" type="submit" type="submit" id="login-button" formaction="home_B">Sign in</button>
       {{/if}}
     </form>
   </div>
+</body>
+
 
   <script type="text/javascript">
     function loginHelp() {
       alert("Please enter your email and password to sign in.");
     }
   </script>
+
 </html>

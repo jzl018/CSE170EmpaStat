@@ -9,6 +9,26 @@
 	color: #CC00AA;
 }
 
+#login-button {
+  background-color: #4990e2;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  color:#FFFFFF;
+  font-size:18px;
+
+}
+
+#logo-title {
+  max-width:50%;
+  height:auto;
+}
+
+#inputEmail {
+  max-width:300px;
+  height:auto;
+  
+}
+
 h1, h2, h3, h4, h5 {
 	color: #575757;
   font-family: "HelveticaNeue-CondensedBold", "Helvetica Neue", Helvetica, Arial, sans-serif;
