@@ -12,9 +12,9 @@
 #login-button {
   background-color: #4990e2;
   font-family: "HelveticaNeue-Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-transform: uppercase;
   color:#FFFFFF;
   font-size:18px;
+  max-width: 200px;
 
 }
 
@@ -26,7 +26,23 @@
 #inputEmail {
   max-width:300px;
   height:auto;
-  
+  margin: 0 auto;
+  width:250px;
+}
+
+#inputPassword {
+  max-width:300px;
+  height:auto;
+  margin: 0 auto;
+  width:250px;
+}
+
+#delete-button {
+  background-color: #575757;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color:#FFFFFF;
+  font-size:18px;
+  max-width: 200px;
 }
 
 h1, h2, h3, h4, h5 {
@@ -87,6 +103,23 @@ h1, h2, h3, h4, h5 {
   font-variant: normal;
   text-transform: uppercase;
   letter-spacing: 2px;
+}
+
+.category-button {
+  background-color: #F7AD3A;
+  color: #FFFFFF;
+}
+
+#tasklink {
+  background-color: #F7AD3A;
+  color: #FFFFFF;
+}
+
+.input-group {
+  max-width:800px;
+  height:auto;
+  margin: 0 auto;
+  width:400px;
 }
 
 p {
