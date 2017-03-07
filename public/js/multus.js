@@ -16,31 +16,19 @@ function initializePage() {
 function recordEvent(e) {
 e.preventDefault();	
 
-ga("send", {
-	'hitType': "pageview",
-	'page': '/'});
-ga("send", {
-	'hitType': "pageview",
-	'page': '/home_B'});
-ga("send", {
-	'hitType': "pageview",
-	'page': '/profile_B'});
-ga("send", {
-	'hitType': "pageview",
-	'page': '/history_B'});
-ga("send", {
-	'hitType': "pageview",
-	'page': '/help_B'});
-ga("send", {
-	'hitType': "pageview",
-	'page': '/profile'});
-ga("send", {
-	'hitType': "pageview",
-	'page': '/history'});
-ga("send", {
-	'hitType': "pageview",
-	'page': '/help'});
-}
+// ga("send", {
+// 	'hitType': "pageview",
+// 	'page': '/'});
+// ga("send", {
+// 	'hitType': "pageview",
+// 	'page': '/profile'});
+// ga("send", {
+// 	'hitType': "pageview",
+// 	'page': '/history'});
+// ga("send", {
+// 	'hitType': "pageview",
+// 	'page': '/help'});
+// }
 
 function anagrammedName(name) {
 

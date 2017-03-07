@@ -73,6 +73,12 @@
 			}
 			 
 			function w3_close() {
+		    	// ga("send", "event", "category", "action")
+			    document.getElementById("mySidenav").style.display = "none";
+			}
+
+			function w3_close_ga() {
+		    	ga("send", "event", "sidebar", "click")
 			    document.getElementById("mySidenav").style.display = "none";
 			}
 		</script>
