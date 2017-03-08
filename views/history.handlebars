@@ -31,7 +31,7 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	</head>
-  <body>
+  <body class="bg-color">
 		{{#if side}}
 			<!-- Sidenav (hidden by default) -->
 			<nav class="w3-sidenav w3-card-2 w3-top w3-xlarge w3-animate-left" style="display:none;z-index:2;width:40%;min-width:300px" id="mySidenav">
@@ -59,7 +59,7 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 		  <div class="w3-xlarge w3-padding-xlarge" style="max-width:1200px;margin:auto">
 		  	<!-- Unneeded for bottom nav -->
 		  	{{#if side}}
-		    	<div class="w3-opennav w3-left w3-hover-text-grey" onclick="w3_open()">&#9776</div>
+		    	<div class="w3-opennav w3-left w3-text-white" onclick="w3_open()">&#9776</div>
 			{{/if}}
 
 		    {{#if side}}

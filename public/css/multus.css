@@ -9,6 +9,19 @@
 	color: #CC00AA;
 }
 
+.login-page {
+  background-color: #FAFAFA;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color:#575757;
+  font-size:18px;
+  max-width: 800px;
+}
+
+.form-signin {
+  width:300px;
+  margin: 0 auto;
+}
+
 #login-button {
   background-color: #4990e2;
   font-family: "HelveticaNeue-Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -23,19 +36,6 @@
   height:auto;
 }
 
-#inputEmail {
-  max-width:300px;
-  height:auto;
-  margin: 0 auto;
-  width:250px;
-}
-
-#inputPassword {
-  max-width:300px;
-  height:auto;
-  margin: 0 auto;
-  width:250px;
-}
 
 #delete-button {
   background-color: #575757;
@@ -157,7 +157,7 @@ p {
 #trophy {
   min-height: 100px;
   min-width: 100px;
-  margin:0 10px 10px 25px;
+  margin:0 20px 20px 25px;
 }
 
 
@@ -167,10 +167,65 @@ p {
 
 .friend {
 	display: inline-block;
-/*	width: 100%; */
+
 }
 
-.btn-circle {
+/*.ibutton {
+  width:25%;
+}*/
+
+/*button css*/
+.ibutton {
+  max-width: 110px;
+  max-height:110px;
+  text-align:center;
+
+  font-size: 14px;
+  border-radius:100%;
+  display:inline-block;
+  color:#FFFFFF;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight:bold;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+
+.ibutton-circle {
+  width: 130px;
+  height: 120px;
+  padding-bottom:100%;
+  border-radius:50%;
+  border:13px solid #D2EDB7;
+  overflow:hidden;
+  background: #7ED321; 
+  box-shadow: 0 0 3px gray;  
+  line-height: 100px;
+
+}
+
+.ibutton-circle:hover {
+  background:#E05B68;
+}
+
+span {
+  line-height: normal;
+  display:inline-block;
+  vertical-align: middle;
+}
+
+.buttondeco:hover, .buttondeco:active {
+  color:#ffffff;
+}
+
+.text-padding {
+  margin:20px;
+  text-align: center;
+}
+
+
+
+
+/*.btn-circle {
   width: 30px;
   height: 30px;
   text-align: center;
@@ -178,4 +233,4 @@ p {
   font-size: 12px;
   line-height: 1.42;
   border-radius: 15px;
-}
+}*/

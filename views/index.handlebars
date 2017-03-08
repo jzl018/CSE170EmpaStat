@@ -107,7 +107,7 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 		    </script>
 		  </div>
 		</div>
-
+<!-- class="btn" btn-primary btn-lg btn-block -->
 		<br/> <br/> <br/> <br/>
 
 		<div class="container">	
@@ -116,10 +116,12 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 				
 				{{#each categories}}
 					{{#unless complete}}
-						<div class="friend">
-							<a href="category/{{cid}}" class="btn btn-primary btn-lg btn-block">{{cname}}</a>
-							<progress value={{progress}} max="100"></progress>
+					<div class="ibutton text-padding">
+						<div class="friend ibutton-circle">
+							<a class= "buttondeco" href="category/{{cid}}" ><span>{{cname}}</span></a>
 						</div>
+							<progress value={{progress}} max="100"></progress>
+					</div>
 					{{/unless}}
 				{{/each}}
 			</div>
