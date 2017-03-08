@@ -28,7 +28,7 @@ e.preventDefault();
 // ga("send", {
 // 	'hitType': "pageview",
 // 	'page': '/help'});
-// }
+}
 
 function anagrammedName(name) {
 
