@@ -22,7 +22,7 @@
 			<nav class="w3-sidenav w3-card-2 w3-top w3-xlarge w3-animate-left" style="display:none;z-index:2;width:40%;min-width:300px" id="mySidenav">
 			  <a href="javascript:void(0)" onclick="w3_close()"
 			  class="w3-closenav">Close Menu</a>
-			  <a href="/" onclick="w3_close()">Tasks</a>
+			  <a href="/" onclick="w3_close()">Dashboard</a>
 			  <a href="profile" onclick="w3_close()">Profile</a>
 			  <a href="history" onclick="w3_close()">Past Tasks</a>
 			  <a href="login" onclick="w3_close()">Logout</a>
@@ -31,7 +31,7 @@
 			<!-- Bottom navigation -->
 			<div class="w3-bottom">
 	   			<ul class="nav nav-pills">
-		      		<li><a href="home_B"><span class="glyphicon glyphicon-tasks"></span> Tasks</a></li>
+		      		<li><a href="home_B"><span class="glyphicon glyphicon-tasks"></span>Dashboard</a></li>
 		      		<li><a href="profile"><span class="glyphicon glyphicon-user"></span> Profile</a></li>
 			      	<li class="active"><a href="history"><span class="glyphicon glyphicon-calendar"></span> Past Tasks</a></li>
 					<li><a href="login"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
@@ -62,10 +62,13 @@
 				{{#each categories}}
 					{{#each tasks}}
 						{{#if complete}}
-							<div class="friend">
-								<a href="/category/{{cid}}/task/{{tid}}" class="btn btn-primary btn-lg btn-block">{{tname}}</a>
-								<progress value={{progress}} max="100"></progress>
+						<div class="ibutton text-padding">
+							<div class="friend ibutton-circle">
+								<a href="/category/{{cid}}/task/{{tid}}" class="buttondeco"><span>{{tname}}</span></a>
+								
 							</div>
+							<progress value={{progress}} max="100"></progress>
+						</div>
 						{{/if}}
 					{{/each}}
 				{{/each}}

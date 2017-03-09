@@ -27,9 +27,6 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
         
         <h3><a href="/" style="text-decoration:none;" id="thisdate">X</a></h3>
       </div>
-      <div class="w3-right">
-  		  <button type="submit" name="modify" formaction="/modifyCategory" onclick="return setProgress()" class="w3-btn-floating-large w3-teal">Save</button>
-  	  </div>
       <div class="w3-center" id="category-design">
        &nbsp &nbsp &nbsp
          <input type="text" name="cname" id="cname" style="text-align:center;" placeholder="Category + Project Title" value="{{cname}}">
@@ -39,13 +36,14 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
         <!-- <h2>{{name}}</h2> -->
       </div>
     </div>
-  </div> <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/>
+  </div> <br/> <br/> <br/> <br/> <br/> 
   <!-- !PAGE CONTENT! -->
-  <div class="container"> 
+  <div class="container w3-center"> 
+    <button type="button" onclick="location.href='/category/{{cid}}/newTask'" id="login-button" class="btn w3-button glyphicon-plus">Add Subtask</button> <br/> <br/> <br/>
       <div class="d-inline-block bg-warning text-center">
         {{#each tasks}}
           {{#unless complete}}
-            <div class="friend">
+            <div class="friend ">
               <a href="/category/{{../cid}}/task/{{tid}}" id="tasklink" class="btn btn-lg btn-block">{{tname}}</a>
               <input type="text" name="tname" id="tname" value="{{tname}}" hidden>
               <progress value="0" max="100"></progress>
@@ -56,8 +54,9 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
       <br/>
       
       <div class="w3-center">
-        <button type="button" onclick="location.href='/category/{{cid}}/newTask'" id="login-button" class="btn w3-button">Add Subtask</button>
-        <button type="button" id="delete-button" onclick="location.href='/removeCategory'" class="btn w3-button">Delete Category</button>
+        <button type="button" id="delete-button" onclick="location.href='/removeCategory'" class="btn w3-button">Delete</button>
+        <button type="submit" id="save-button"name="modify" formaction="/modifyCategory" onclick="return setProgress()" class="btn w3-button">Save</button>
+        
       </div>
       
     </div>

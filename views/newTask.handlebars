@@ -25,12 +25,12 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
       <div class="w3-opennav w3-left w3-hover-text-grey" onclick="w3_open()">
         <h3><a href="/category/{{cid}}" style="text-decoration:none;" id="thisdate">X</a></h3>
       </div>
-      <div class="w3-right">
+      <!-- <div class="w3-right">
   		    <button type="submit" onsubmit="location.href='location.href'/category/{{cid}}"  class="w3-btn-floating-large w3-teal">Save</button>
         <input type="text" name="cname" id="cname" value="{{cname}}" hidden>
         <input type="number" name="cid" id="cid" value="{{cid}}" hidden>
         <input type="text" name="progress" value="{{progress}}" hidden>
-  	  </div>
+  	  </div> -->
       <div class="w3-center" id="text-design">
         &nbsp &nbsp &nbsp
         <input type="text" name="tname" id="tname" placeholder="Subtask Name" style="text-align:center;" required>
@@ -54,8 +54,12 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
       Remind <input type="number" name="endreminder" min="0" step="10" max="180"> minutes before due <br/> <br/>
       <input type="number" name="progress" min="0" max="100" value="0" hidden>
       <input type="text" name="complete" id="complete" value="" hidden>
-      <input type="reset" value="Clear" class="w3-btn">
-      <button type="submit" onsubmit="location.href='location.href'/category/{{cid}}"  class="w3-btn-floating-large w3-teal">Save</button>
+      <!-- <input type="submit" formaction="/newTask/remove" value="Discard" id="delete-button" class="w3-btn btn"> -->
+      
+      <button type="submit" id="save-button" onsubmit="location.href='location.href'/category/{{cid}}"  class="btn w3-button ">Save</button>
+      <input type="text" name="cname" id="cname" value="{{cname}}" hidden>
+        <input type="number" name="cid" id="cid" value="{{cid}}" hidden>
+        <input type="text" name="progress" value="{{progress}}" hidden>
 
     </div>
   </div>

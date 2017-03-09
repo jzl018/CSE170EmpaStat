@@ -24,10 +24,14 @@
 
 #login-button {
   background-color: #4990e2;
-  font-family: "HelveticaNeue-Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "HelveticaNeue-CondensedBold","HelveticaNeue-Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color:#FFFFFF;
-  font-size:18px;
+  font-size:14px;
   max-width: 200px;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 
 }
 
@@ -38,11 +42,28 @@
 
 
 #delete-button {
-  background-color: #575757;
-  font-family: "HelveticaNeue-Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: #8D8D8D;
+  font-family: "HelveticaNeue-CondensedBold", "HelveticaNeue-Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color:#FFFFFF;
-  font-size:18px;
+  font-size:14px;
   max-width: 200px;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+#save-button{
+  background-color: #E05B68;
+  font-family: "HelveticaNeue-CondensedBold", "HelveticaNeue-Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color:#FFFFFF;
+  font-size:14px;
+  max-width: 200px;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+
 }
 
 h1, h2, h3, h4, h5 {
@@ -106,13 +127,30 @@ h1, h2, h3, h4, h5 {
 }
 
 .category-button {
-  background-color: #F7AD3A;
+  font-family: "HelveticaNeue-CondensedBold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: #4990e2;
   color: #FFFFFF;
+  font-size:14px;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
+
+.category-button:hover, .category-button:active {
+  color:#ffffff;
+}
+
 
 #tasklink {
   background-color: #F7AD3A;
+  font-family: "HelveticaNeue-CondensedBold", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #FFFFFF;
+  font-size:14px;
+  font-style: normal;
+  font-variant: normal;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 .input-group {
@@ -143,6 +181,10 @@ p {
   font-variant: normal;
   text-transform: uppercase;
   letter-spacing: 2px;
+}
+
+#profile-picture {
+  max-width: 200px;
 }
 
 #category-design {
@@ -187,11 +229,12 @@ p {
   text-transform: uppercase;
   text-decoration: none;
   font-weight:bold;
+  letter-spacing: 2px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   }
 
 .ibutton-circle {
-  width: 130px;
+  width: 135px;
   height: 120px;
   padding-bottom:100%;
   border-radius:50%;
@@ -200,6 +243,7 @@ p {
   background: #7ED321; 
   box-shadow: 0 0 3px gray;  
   line-height: 100px;
+
 
 }
 
@@ -222,8 +266,13 @@ span {
   text-align: center;
 }
 
+#help-design {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
 
-
+#help-design.h2 {
+  font-size: 18px;
+}
 
 /*.btn-circle {
   width: 30px;
