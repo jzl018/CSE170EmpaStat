@@ -114,7 +114,7 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 					<div class="ibutton text-padding">
 						<div class="friend ibutton-circle">
 							<a class= "buttondeco" href="category/{{cid}}" ><span>{{cname}}</span></a>
-						</div>
+						</div><br/><br/>
 							<progress value={{progress}} max="100"></progress>
 					</div>
 					{{/unless}}
@@ -128,7 +128,7 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
             <input type="text" class="form-control" name="cname" placeholder="Enter Category Name">
 			      <input type="number" name="progress" min="0" max="100" value="0" hidden>
 			      <input type="text" name="complete" value="" hidden>
-            <span class="input-group-btn">
+            <span class="input-group-btn" style="max-width: 300px">
               <button type="submit" class="btn category-button">
                 <span class="glyphicon glyphicon-plus"></span> Quick Add
               </button>

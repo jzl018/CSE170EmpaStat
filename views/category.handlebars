@@ -39,16 +39,16 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
 
 
     </div>
-  </div> <br/> <br/> <br/> <br/> <br/> 
+  </div> <br/> <br/> <br/> <br/> <br/> <br/>  
   <!-- !PAGE CONTENT! -->
   <div class="container w3-center"> 
     <button type="button" onclick="location.href='/category/{{cid}}/newTask'" id="login-button" class="btn w3-button glyphicon-plus">Add Subtask</button> <br/> <br/> <br/>
       <div class="d-inline-block bg-warning text-center">
         {{#each tasks}}
           {{#unless complete}}
-            <div class="friend ">
+            <div class="friend" style="margin:5px;">
               <a href="/category/{{../cid}}/task/{{tid}}" id="tasklink" class="btn btn-lg btn-block">{{tname}}</a>
-              <input type="text" name="tname" id="tname" value="{{tname}}" hidden>
+              <input type="text" name="tname" id="tname" value="{{tname}}" hidden><br/>
               <progress value="0" max="100"></progress>
             </div>
           {{/unless}}
@@ -56,9 +56,9 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
       </div>
       <br/>
       
-      <div class="w3-center">
-        <button type="button" id="delete-button" onclick="location.href='/removeCategory'" class="btn w3-button">Delete</button>
-        <button type="submit" id="save-button"name="modify" formaction="/modifyCategory" onclick="return setProgress()" class="btn w3-button">Save</button>
+      <div class="w3-center" >
+        <button type="button" id="delete-button" style="margin:5px;" onclick="location.href='/removeCategory'" class="btn w3-button">Delete</button>
+        <button type="submit" id="save-button" style="margin:5px;" name="modify" formaction="/modifyCategory" onclick="return setProgress()" class="btn w3-button">Save</button>
         
       </div>
       

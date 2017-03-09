@@ -36,12 +36,12 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
         <input type="text" name="tname" id="tname" placeholder="Subtask Name" style="text-align:center;" required>
       </div>
     </div>
-  </div> <br/>
+  </div> <br/> <br/> <br/>   
   <!-- !PAGE CONTENT! -->
   <div class="w3-main w3-content w3-padding" id="text-design" style="max-width:1200px;margin-top:100px text-center">
-    <div class="w3-center" id="text-design"><br><br><br>
-      <h4 id="txt">Difficulty</h4>
-      <input type="range" name="difficulty" min="1" max="5"> <br/><br/>
+    <div class="w3-center" id="text-design"><br/><br/><br/>
+      <!-- <h4 id="txt">Difficulty</h4>
+      <input type="range" name="difficulty" min="1" max="5"> <br/><br/> -->
       <h4 id="txt">Duration</h4>
       <input type="number" name="duration" min="1" max="10"> hour(s) <br/><br/>
       <h4 id="txt">Reminders</h4>
@@ -56,7 +56,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
       <input type="text" name="complete" id="complete" value="" hidden>
       <!-- <input type="submit" formaction="/newTask/remove" value="Discard" id="delete-button" class="w3-btn btn"> -->
       
-      <button type="submit" id="save-button" onsubmit="location.href='location.href'/category/{{cid}}"  class="btn w3-button ">Save</button>
+      <button type="submit" id="save-button" style="margin:5px;" onsubmit="location.href='location.href'/category/{{cid}}"  class="btn w3-button ">Save</button>
       <input type="text" name="cname" id="cname" value="{{cname}}" hidden>
         <input type="number" name="cid" id="cid" value="{{cid}}" hidden>
         <input type="text" name="progress" value="{{progress}}" hidden>

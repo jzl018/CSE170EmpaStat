@@ -222,7 +222,7 @@ p {
   max-height:110px;
   text-align:center;
 
-  font-size: 14px;
+  font-size: 16px;
   border-radius:100%;
   display:inline-block;
   color:#FFFFFF;
@@ -238,11 +238,11 @@ p {
   height: 120px;
   padding-bottom:100%;
   border-radius:50%;
-  border:13px solid #D2EDB7;
+  border:14px solid #D2EDB7;
   overflow:hidden;
   background: #7ED321; 
   box-shadow: 0 0 3px gray;  
-  line-height: 100px;
+  line-height: 110px;
 
 
 }
@@ -262,7 +262,7 @@ span {
 }
 
 .text-padding {
-  margin:20px;
+  margin:40px;
   text-align: center;
 }
 
