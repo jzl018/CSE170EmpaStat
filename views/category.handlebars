@@ -57,12 +57,13 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
       <br/>
       
       <div class="w3-center" >
-        <button type="button" id="delete-button" style="margin:5px;" onclick="location.href='/removeCategory'" class="btn w3-button">Delete</button>
+        <button type="submit" id="delete-button" style="margin:5px;" formaction="/removeCategory" class="btn w3-button">Delete</button>
         <button type="submit" id="save-button" style="margin:5px;" name="modify" formaction="/modifyCategory" onclick="return setProgress()" class="btn w3-button">Save</button>
         
       </div>
       
     </div>
+  </form>
 
 
   <!-- End page content -->
