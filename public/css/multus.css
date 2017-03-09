@@ -158,10 +158,10 @@ h1, h2, h3, h4, h5 {
 }
 
 .input-group {
-  max-width:800px;
+  max-width:500px;
   height:auto;
   margin: 0 auto;
-  width:400px;
+  padding:10px;
 }
 
 p {
@@ -270,7 +270,7 @@ p {
   background: #7ED321; 
   box-shadow: 0 0 3px gray;  
   line-height: 110px;
-  margin-left: 10px;
+ /* margin-left: 10px;*/
 
 
 }
@@ -308,7 +308,7 @@ span {
 
 /*centering the progress bar*/
 progress {
-    
+    margin-left:-10px; 
 
 }
 /*.btn-circle {
