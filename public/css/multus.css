@@ -274,6 +274,10 @@ span {
   font-size: 18px;
 }
 
+#info-button:hover, #info-button:active {
+  color:#ffffff;
+}
+
 /*.btn-circle {
   width: 30px;
   height: 30px;
