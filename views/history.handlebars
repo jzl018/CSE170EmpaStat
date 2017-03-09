@@ -29,12 +29,12 @@
 			</nav>
 		{{else}}
 			<!-- Bottom navigation -->
-			<div class="w3-bottom">
+			<div class="w3-bottom" id="myBottomnav">
 	   			<ul class="nav nav-pills">
-		      		<li><a href="home_B"><span class="glyphicon glyphicon-tasks"></span>Dashboard</a></li>
-		      		<li><a href="profile"><span class="glyphicon glyphicon-user"></span> Profile</a></li>
-			      	<li class="active"><a href="history"><span class="glyphicon glyphicon-calendar"></span> Past Tasks</a></li>
-					<li><a href="login"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+		      		<li class="bottomNav" ><a href="home_B" onclick="bottom_ga()"><span class="glyphicon glyphicon-tasks"></span> <span class="hidden-xs hidden-sm;">Dashboard</span></a></li>
+		      		<li class="bottomNav" ><a href="profile" onclick="bottom_ga()"><span class="glyphicon glyphicon-user"></span> <span class="hidden-xs hidden-sm;">Profile </span></a></li>
+			      	<li class="active bottomNav"><a href="history" onclick="bottom_ga()"><span class="glyphicon glyphicon-calendar"></span> <span class="hidden-xs hidden-sm;">Past Tasks </span></a></li>
+					<li class="bottomNav"><a href="login" onclick="bottom_ga()"><span class="glyphicon glyphicon-log-out"></span> <span class="hidden-xs hidden-sm;">Logout </span></a></li>
 		   		</ul>
 	  		</div>
 		{{/if}}
@@ -47,11 +47,11 @@
 		    	<div class="w3-opennav w3-left w3-text-white" onclick="w3_open()">&#9776</div>
 			{{/if}}
 
-	    	<div class="w3-right">
-			  	<img src= "/images/info.png" onclick="location.href='help'" class="w3-btn-floating" style ="background-color: #4990E2">
+	    	<div class="w3-right" style="position:absolute; right:0; margin-right:40px;">
+			  	<img src= "/images/info.png" onclick="location.href='help'" class="w3-btn-floating info-button" style ="background-color: #4990E2">
 			</div>
 
-		    <div class="w3-center top-center">&nbsp; Past Tasks</div>
+		    <div class="w3-center top-center" style="margin-left:20px;">&nbsp; Past Tasks</div>
 		  </div>
 		</div>
 
@@ -66,7 +66,7 @@
 							<div class="friend ibutton-circle">
 								<a href="/category/{{cid}}/task/{{tid}}" class="buttondeco"><span>{{tname}}</span></a>
 								
-							</div>
+							</div><br/><br/>
 							<progress value={{progress}} max="100"></progress>
 						</div>
 						{{/if}}

@@ -9,6 +9,10 @@
 	color: #CC00AA;
 }
 
+.container {
+  width:103%;
+}
+
 .login-page {
   background-color: #FAFAFA;
   font-family: "HelveticaNeue-Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -164,6 +168,7 @@ p {
   font-size: 20px;
 }
 
+/*Side nave bar css */
 #mySidenav {
   font-family: "HelveticaNeue-CondensedBold", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #575757;
@@ -174,6 +179,7 @@ p {
   letter-spacing: 2px;
 }
 
+/*bottom nav bar css */
 #myBottomnav {
   font-family: "HelveticaNeue-CondensedBold", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #575757;
@@ -182,6 +188,15 @@ p {
   font-variant: normal;
   text-transform: uppercase;
   letter-spacing: 2px;
+  background-color: #ffffff;
+  width:103%;
+ 
+}
+
+.bottomNav  {
+  width: 24%;
+  text-align: center;
+  vertical-align: middle;
 }
 
 
@@ -255,6 +270,7 @@ p {
   background: #7ED321; 
   box-shadow: 0 0 3px gray;  
   line-height: 110px;
+  margin-left: 10px;
 
 
 }
@@ -290,6 +306,11 @@ span {
   color:#ffffff;
 }
 
+/*centering the progress bar*/
+progress {
+    
+
+}
 /*.btn-circle {
   width: 30px;
   height: 30px;
