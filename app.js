@@ -64,9 +64,9 @@ app.get('/profile', profile.viewProfile);
 app.get('/history', history.viewHistory);
 //for A/B Testing
 app.get('/home_B', index.viewBottom);
-app.get('/help_B', help.viewHelpBottom);
-app.get('/profile_B', profile.viewProfileBottom);
-app.get('/history_B', history.viewHistoryBottom);
+//app.get('/help_B', help.viewHelpBottom);
+//app.get('/profile_B', profile.viewProfileBottom);
+//app.get('/history_B', history.viewHistoryBottom);
 // Example route
 // app.get('/users', user.list);
 

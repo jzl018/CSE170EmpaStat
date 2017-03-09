@@ -2,11 +2,12 @@
 var data = require('../data.json');
 
 exports.viewHelp = function(req, res){
-	data["side"] = true;
+	data["side"] = req.session.side;
+	console.log(req.session.side)
 	res.render('help', data);
 };
 
-exports.viewHelpBottom = function(req, res){
-	data["side"] = false;
-	res.render('help', data);
-};
+// exports.viewHelpBottom = function(req, res){
+// 	data["side"] = false;
+// 	res.render('help', data);
+// };
