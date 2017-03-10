@@ -33,10 +33,10 @@
 			<!-- Bottom navigation -->
 			<div class="w3-bottom" id="myBottomnav">
 	   			<ul class="nav nav-pills">
-		      		<li class="bottomNav" ><a href="home_B" onclick="bottom_ga()"><span class="glyphicon glyphicon-tasks"></span> <span class="hidden-xs hidden-sm;">Dashboard</span></a></li>
-		      		<li class="active bottomNav"><a href="profile" onclick="bottom_ga()"><span class="glyphicon glyphicon-user"></span> <span class="hidden-xs hidden-sm;">Profile </span></a></li>
-			      	<li class="bottomNav"><a href="history" onclick="bottom_ga()"><span class="glyphicon glyphicon-calendar"></span> <span class="hidden-xs hidden-sm;">Past Tasks </span></a></li>
-					<li class="bottomNav"><a href="login" onclick="bottom_ga()"><span class="glyphicon glyphicon-log-out"></span> <span class="hidden-xs hidden-sm;">Logout </span></a></li>
+		      		<li class="bottomNav" ><a href="home_B" onclick="bottom_ga()"><span class="glyphicon glyphicon-tasks"></span> </br><span >Dashboard</span></a></li>
+		      		<li class="active bottomNav"><a href="profile" onclick="bottom_ga()"><span class="glyphicon glyphicon-user"></span> </br><span>Profile </span></a></li>
+			      	<li class="bottomNav"><a href="history" onclick="bottom_ga()"><span class="glyphicon glyphicon-calendar"></span> </br><span>Past Tasks </span></a></li>
+					<li class="bottomNav"><a href="login" onclick="bottom_ga()"><span class="glyphicon glyphicon-log-out"></span> </br><span>Logout </span></a></li>
 		   		</ul>
 	  		</div>
 		{{/if}}
@@ -60,39 +60,41 @@
 
 		<br/> <br/> <br/> <br/>
 
-		<div class="text-center" id ="text-design">
+		<div class="text-center">
 				{{#each users}}
-					<br/><br/><br/><img src= "/images/profile-pic.png" style ="background-color: #FAFAFA" class="text-center" id="profile-picture"><br/></br>
-					<h2>{{name}}</h2> <br><hr> <br>
-					<h2> Stats </h2> </br>
-					<p>Created Categories - {{createdcategories}} categories</p>
-					<p>Created Tasks - {{createdtasks}} tasks</p>
-					<p>Tasks Completed - {{completedtasks}} tasks</p> <br/> <hr> <br>
+					<br/><img src= "/images/profile-pic.png" style ="background-color: #FAFAFA; max-width:100px;" class="text-center" id="profile-picture" ><br/>
+					<h3>{{name}}</h3> <hr> 
+					<h4> - - - - My Stats - - - - </h4> </br>
+				<div id="profile-con">
+					<p id="profile-text">Created Categories - {{createdcategories}} categories</p>
+					<p id="profile-text">Created Tasks - {{createdtasks}} tasks</p>
+					<p id="profile-text">Tasks Completed - {{completedtasks}} tasks</p> 
+				</div>
 				{{/each}}
-				<h2> Challenges </h2> </br>
-				<div class="d-inline-block bg-warning text-center">
-					<h3> ---- Completed ---- </h3><br/>
+				<!-- <h3> - - - - Challenges - - - - </h3>  -->
+				<hr><div class="d-inline-block bg-warning text-center">
+					<h4> - - - - Challenges - - - - </h4><br/>
 						{{#each challenges}}
 							{{#if complete}}
 								<div class="friend">
 									<!-- <i class="fa fa-trophy" style="font-size:200px;color:gold;"></i> --> 
 									<i><img src= "/images/trophy-done.png" style="background-color:#FAFAFA" id="trophy"></i>
-									<p> {{name}} </p>
+									<p id="trophy-text"> {{name}} </p>
 								</div>
 							{{/if}}
 						{{/each}}
 				</div>
 
-				<br/>
+				<!-- <br/> -->
 
 				<div class="d-inline-block bg-warning text-center">
-					<h3> ---- Upcoming ---- </h3><br/>
+					<!-- <h4> - - - - Upcoming - - - - </h4><br/> -->
 						{{#each challenges}}
 							{{#unless complete}}
 								<div class="friend">
 									<!-- <i class="fa fa-trophy" style="font-size:150px;color:grey;"></i> -->
 									<i><img src= "/images/trophy-notdone.png" style="background-color:#FAFAFA" id="trophy"></i>
-									<p> {{name}} </p>
+									<p id="trophy-text">  {{name}} </p>
 								</div>
 							{{/unless}}
 						{{/each}}

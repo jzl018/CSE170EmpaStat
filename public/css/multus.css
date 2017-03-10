@@ -9,8 +9,16 @@
 	color: #CC00AA;
 }
 
-.container {
-  width:103%;
+@font-face {
+    font-family: 'OpenSansLight';
+    src: url('fonts/fonts/OpenSans-Light-webfont.eot');
+    src: url('fonts/OpenSans-Light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/OpenSans-Light-webfont.woff') format('woff'),
+         url('fonts/OpenSans-Light-webfont.ttf') format('truetype'),
+         url('fonts/OpenSans-Light-webfont.svg#OpenSansLight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
 }
 
 .login-page {
@@ -161,7 +169,7 @@ h1, h2, h3, h4, h5 {
   max-width:500px;
   height:auto;
   margin: 0 auto;
-  padding:10px;
+  padding:20px;
 }
 
 p {
@@ -183,11 +191,11 @@ p {
 #myBottomnav {
   font-family: "HelveticaNeue-CondensedBold", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #575757;
-  font-size: 18px;
+  font-size: 10px;
   font-style: normal;
   font-variant: normal;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   background-color: #ffffff;
   width:103%;
  
@@ -206,12 +214,32 @@ p {
   color: #575757;
   font-style: normal;
   font-variant: normal;
+  font-weight:normal;
   text-transform: uppercase;
   letter-spacing: 2px;
 }
 
+#profile-text {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  color:#FFFFFF;
+  font-style: normal;
+  font-variant: normal;
+  font-weight:normal;
+}
+
+#profile-con{
+  background-color: #8D8D8D;
+  width: 300px;
+  padding: 10px;
+  margin: auto;
+  border-radius: 5px;
+}
+
+}
+
 #profile-picture {
-  max-width: 200px;
+  max-width: 150px;
 }
 
 #category-design {
@@ -223,10 +251,19 @@ p {
   letter-spacing: 2px;
 }
 
+/*trophy image size*/
 #trophy {
-  min-height: 100px;
-  min-width: 100px;
-  margin:0 20px 20px 25px;
+  max-height: 60px;
+  max-width: 60px;
+  margin:0 10px 10px 10px;
+}
+
+/*trophy text*/
+#trophy-text {
+  max-width: 65px;
+  color:#575757;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
 }
 
 
@@ -290,16 +327,17 @@ span {
 }
 
 .text-padding {
-  margin:40px;
+  margin:25px;
   text-align: center;
 }
 
 #help-design {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding: 20px;
 }
 
-#help-design.h2 {
-  font-size: 18px;
+.help-text {
+  font-size: 14px;
 }
 
 #info-button:hover, #info-button:active {

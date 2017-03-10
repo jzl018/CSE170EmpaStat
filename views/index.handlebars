@@ -68,10 +68,12 @@ valueOf()+(h?'&utmxhash='+escape(h.substr(1)):'')+
 			<!-- Bottom navigation -->
 			<div class="w3-bottom">
 	   			<ul class="nav nav-pills" id="myBottomnav">
-		      		<li class="active bottomNav"><a href="home_B" onclick="bottom_ga()"><span class="glyphicon glyphicon-tasks"></span> <span class="hidden-xs hidden-sm;">Dashboard</span></a></li>
-		      		<li class="bottomNav"><a href="profile" onclick="bottom_ga()"><span class="glyphicon glyphicon-user "></span> <span class="hidden-xs hidden-sm;">Profile </span></a></li>
-			      	<li class="bottomNav"><a href="history" onclick="bottom_ga()"><span class="glyphicon glyphicon-calendar "></span> <span class="hidden-xs hidden-sm;">Past Tasks </span></a></li>
-					<li class="bottomNav"><a href="login" onclick="bottom_ga()"><span class="glyphicon glyphicon-log-out"></span> <span class="hidden-xs hidden-sm;">Logout </span></a></li>
+		      		<ul class="nav nav-pills">
+		      		<li class="active bottomNav" ><a href="home_B" onclick="bottom_ga()"><span class="glyphicon glyphicon-tasks"></span> </br><span >Dashboard</span></a></li>
+		      		<li class="bottomNav"><a href="profile" onclick="bottom_ga()"><span class="glyphicon glyphicon-user"></span> </br><span>Profile </span></a></li>
+			      	<li class="bottomNav"><a href="history" onclick="bottom_ga()"><span class="glyphicon glyphicon-calendar"></span> </br><span>Past Tasks </span></a></li>
+					<li class="bottomNav"><a href="login" onclick="bottom_ga()"><span class="glyphicon glyphicon-log-out"></span> </br><span>Logout </span></a></li>
+		   		</ul>
 		   		</ul>
 	  		</div>
 		{{/if}}
