@@ -2,8 +2,6 @@
 var data = require('../data.json');
 
 exports.viewHelp = function(req, res){
-	data["side"] = req.session.side;
-	console.log(req.session.side)
 	res.render('help', data);
 };
 
