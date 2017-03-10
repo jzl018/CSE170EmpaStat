@@ -20,6 +20,7 @@ var task = require('./routes/task');
 var add = require('./routes/add');
 var modify = require('./routes/modify');
 var remove = require('./routes/remove');
+var reminder = require('./routes/reminder');
 var profile = require('./routes/profile');
 var history = require('./routes/history');
 // Example route
@@ -57,6 +58,7 @@ app.get('/modifycategory', modifycategory.modifyCategory);
 app.get('/removecategory', removecategory.removeCategory);
 app.get('/category/:cid/newtask', newtask.viewNewTask)
 app.get('/category/:cid/task/:tid', task.viewTask);
+app.get('/category/:cid/task/:tid/reminder', reminder.viewReminder);
 app.get('/category/:cid/add', add.addTask);
 app.get('/category/:cid/modify', modify.modifyTask);
 app.get('/category/:cid/remove', remove.removeTask);
@@ -64,7 +66,6 @@ app.get('/profile', profile.viewProfile);
 app.get('/history', history.viewHistory);
 //for A/B Testing
 app.get('/home_B', index.viewBottom);
-app.get('/home_A', index.view);
 //app.get('/help_B', help.viewHelpBottom);
 //app.get('/profile_B', profile.viewProfileBottom);
 //app.get('/history_B', history.viewHistoryBottom);

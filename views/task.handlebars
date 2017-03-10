@@ -42,7 +42,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
       <input type="range" name="difficulty" min="1" max="5" value="{{difficulty}}"> -->
       <h4 id="txt">Duration</h4>
       <input type="number" name="duration" min="1" max="10" value="{{duration}}"> hour(s) <br/><br/>
-      <h4 id="txt">Reminders</h4>
+      <h4 id="txt"> <a href = '/category/{{cid}}/task/{{tid}}/reminder'> Reminders </a></h4>
       &nbsp &nbsp &nbsp &nbsp Start By:
       <input type="datetime-local" name="startdate" value="{{startdate}}"> <br/> <br/>
       Remind <input type="number" name="startreminder" min="0" step="10" max="180" value="{{startreminder}}"> minutes before start <br/> <br/>
