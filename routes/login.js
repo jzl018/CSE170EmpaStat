@@ -2,6 +2,5 @@
 var data = require('../data.json');
 
 exports.viewLogin = function(req, res){
-	data["side"] = req.session.side;
 	res.render('login', data);
 };
