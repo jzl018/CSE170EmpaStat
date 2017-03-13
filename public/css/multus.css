@@ -295,6 +295,7 @@ p {
   font-weight:bold;
   letter-spacing: 2px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
   }
 
 .ibutton-circle {
@@ -308,6 +309,7 @@ p {
   box-shadow: 0 0 3px gray;  
   line-height: 110px;
  /* margin-left: 10px;*/
+ 
 
 
 }
