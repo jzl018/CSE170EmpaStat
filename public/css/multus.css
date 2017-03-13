@@ -163,6 +163,7 @@ h1, h2, h3, h4, h5 {
   font-variant: normal;
   text-transform: uppercase;
   letter-spacing: 2px;
+  padding: 10px;
 }
 
 .input-group {
