@@ -164,6 +164,7 @@ h1, h2, h3, h4, h5 {
   text-transform: uppercase;
   letter-spacing: 2px;
   padding: 10px;
+  margin-bottom: -20px;
 }
 
 .input-group {
@@ -297,6 +298,7 @@ p {
   letter-spacing: 2px;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 
+
   }
 
 .ibutton-circle {
@@ -309,7 +311,7 @@ p {
   background: #7ED321; 
   box-shadow: 0 0 3px gray;  
   line-height: 110px;
- /* margin-left: 10px;*/
+  margin-left: -10px;
  
 
 
@@ -330,7 +332,8 @@ span {
 }
 
 .text-padding {
-  margin:25px;
+  margin-right: 20px;
+  margin-left: 20px;
   text-align: center;
 }
 
@@ -348,8 +351,15 @@ span {
 }
 
 /*centering the progress bar*/
-progress {
-    margin-left:-10px; 
+#progress2 {
+    width: 150px;
+    margin-left: -20px;
+
+}
+
+.progress1 {
+    vertical-align: middle;
+    margin: auto;
 
 }
 /*.btn-circle {

@@ -3,7 +3,7 @@ html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
 /* Extract from normalize.css by Nicolas Gallagher and Jonathan Neal git.io/normalize */
 html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}
 article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}
-audio,canvas,progress,video{display:inline-block}progress{vertical-align:baseline}
+audio,canvas,progress,video{display:inline-block}progress{vertical-align: middle; margin:auto;}
 audio:not([controls]){display:none;height:0}[hidden],template{display:none}
 a{background-color:transparent;-webkit-text-decoration-skip:objects}
 a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}
@@ -99,7 +99,7 @@ ul.w3-ul{list-style-type:none;padding:0;margin:0}ul.w3-ul li{padding:6px 2px 6px
 .w3-accordion {width:100%;cursor:pointer}
 .w3-accordion-content{cursor:auto;display:none;position:relative;width:100%;margin:0;padding:0}
 .w3-accordion-content a{padding:6px 16px;display:block}.w3-accordion-content a:hover{background-color:#ccc}
-.w3-progress-container{width:100%;height:1.5em;position:relative;background-color:#f1f1f1}
+.w3-progress-container{width:100%;height:1.5em; width: 10px; position:relative;background-color:#f1f1f1}
 .w3-progressbar{background-color:#757575;height:100%;position:absolute;line-height:inherit}
 input[type=checkbox].w3-check,input[type=radio].w3-radio{width:24px;height:24px;position:relative;top:6px}
 input[type=checkbox].w3-check:checked+.w3-validate,input[type=radio].w3-radio:checked+.w3-validate{color:#009688} 

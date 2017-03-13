@@ -71,20 +71,20 @@
 		    </script>
 		  </div>
 		</div>
-<!-- class="btn" btn-primary btn-lg btn-block -->
+<!-- class="btn" btn-primary btn-lg btn-block d-inline-block bg-warning-->
 		<br/> <br/> <br/> <br/>
 
 		<div>	
 			<div class="w3-center" id="txt"></div> </br>
-			<div class="d-inline-block bg-warning text-center" >
+			<div class=" text-center" >
 				
 				{{#each categories}}
 					{{#unless complete}}
 					<div class="ibutton text-padding">
-						<div class="friend ibutton-circle">
+						<div class="friend ibutton-circle" >
 							<a class= "buttondeco" href="category/{{cid}}" ><span>{{cname}}</span></a>
 						</div><br/><br/>
-							<span style="text-align:center;"><progress value={{progress}} max="100"></progress></span>
+							<span style="text-align:center;"><progress id="progress2" value={{progress}} max="100"></progress></span>
 					</div>
 					{{/unless}}
 				{{/each}}
