@@ -240,9 +240,9 @@ p {
 
 }
 
-#profile-picture {
-  max-width: 150px;
-}
+/*#profile-picture {
+  max-width: 350px;
+}*/
 
 #category-design {
   font-family: "HelveticaNeue-CondensedBold", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -362,6 +362,40 @@ span {
     margin: auto;
 
 }
+ /*reminder system text style*/
+#reminder-text {
+  font-family: "HelveticaNeue-CondensedBold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color:#545454;
+  text-transform: uppercase;
+  font-size: 70px;
+  margin:-15px;
+}
+
+#reminder-md-text {
+  font-family: "HelveticaNeue-CondensedBold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color:#4A90E2;
+  text-transform: uppercase;
+  font-size: 100px;
+  margin:-20px;
+}
+
+#reminder-btm-text {
+  font-family: "HelveticaNeue-CondensedBold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color:#F7AD3A;
+  font-size: 40px;
+  text-transform: lowercase;
+  margin:-20px;
+}
+
+#btm-text {
+  font-family: "HelveticaNeue-CondensedBold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color:#545454;
+  font-size: 24px;
+  text-transform: uppercase;
+  text-align: center;
+  margin:20px;
+}
+
 /*.btn-circle {
   width: 30px;
   height: 30px;

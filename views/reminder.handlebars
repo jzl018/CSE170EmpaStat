@@ -13,7 +13,7 @@
     <link href="/css/w3.css" rel="stylesheet"/>
   </head>
 <style>
-body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
+/*body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}*/
 .w3-sidenav a {padding:20px}
 </style>
 <body class="bg-color">
@@ -22,9 +22,6 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
 <form id="addTaskForm" role="form" method="get" > <!-- onsubmit="return setProgress()"> -->
   <div class="w3-top">
     <div class="w3-xlarge w3-padding-xlarge" style="max-width:1200px;margin:auto">
-      <div class="w3-opennav w3-left w3-hover-text-grey" onclick="w3_open()">
-        <h3><a href="/category/{{cid}}" style="text-decoration:none;" id="thisdate">X</a></h3>
-      </div>
       <div class="w3-center" id="text-design">
        &nbsp &nbsp &nbsp
          <input type="text" name="tname" id="tname" style="text-align:center; width:200px;" value="{{tname}}" required>
@@ -32,14 +29,19 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
       </div>
     </div>
   </div> <br/><br/>
-  <!-- !PAGE CONTENT! -->
-  <div class="w3-main w3-content w3-padding" id="text-design"style="max-width:1200px;margin-top:100px">
-    <div class="w3-center" id="text-design">
+  <!-- !PAGE CONTENT! class="w3-main w3-content w3-padding" class="w3-btn-floating"-->
+  <div  style="max-width:1200px;margin-top:100px">
+    <div class="w3-center" >
 
-      <h3> GET READY FOR </h3>
-      <h2> {{cname}} </h2>
-      <h4> {{tname}} </h4>
-      <h6> YOU GOT IT! </h6>
+      <h1 id="reminder-text" style="text-align:left; margin-left:20px;"> get </h1>
+      <h1 id="reminder-text" style="text-align:left; margin-left:20px;"> ready for</h1>
+      <h2 id="reminder-md-text" style="text-align:left; margin-left:20px;"> {{cname}} </h2>
+      <h4 id="reminder-btm-text" style="text-align:left; margin-left:20px;"> {{tname}} </h4>
+      <h6 id="btm-text"style="text-align:center; "> you got it! </h6>
+      <br/><br/><br/>
+      <div class="w3-opennav w3-center w3-hover-text-grey" onclick="w3_open()">
+        <h3><a href="/category/{{cid}}" style="text-decoration:none;" id="thisdate"><img src= "/images/reminder.png"  style ="background-color: #fafafa; max-width:120px;"></a></h3>
+      </div>
 
     </div>
   </div>
